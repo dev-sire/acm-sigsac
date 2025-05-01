@@ -149,8 +149,9 @@ Here's how to set up the project locally:
 
 **1. Clone the repository:** 
 
-```git clone https://github.com/dev-sire/acm-sigsac
-cd acm-sigsac-duet-website```
+```git clone https://github.com/dev-sire/acm-sigsac```
+
+```cd acm-sigsac-duet-website```
 
 
 **2. Install dependencies:** 
