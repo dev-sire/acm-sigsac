@@ -9,7 +9,7 @@ const teamMembers = [
     name: "Aayesha Murtaza",
     role: "President",
     image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCiduliIEFqzWTvkRcJr0nN8f3BLo4d2XI9wC5",
-    bio: "Leadership isn't about being the loudest voice, but the calmest in the noise",
+    bio: "Titles fade, but the impact of genuine leadership endures.",
     social: {
       linkedin: "https://www.linkedin.com/in/aayesha-murtaza-7859ba267/ ",
       github: "https://github.com/Aayesha-Murtaza"
@@ -20,7 +20,7 @@ const teamMembers = [
     name: "Shahbaz Ali",
     role: "Senior Vice President",
     image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWC5sMwZYTMj2dyIRrVvCucbJ7xiqN09epHk1oA",
-    bio: "Fear never builds the future, but hope does",
+    bio: "Fear never builds the future, but hope does.",
     social: {
       linkedin: "#",
       github: "#"
@@ -31,7 +31,7 @@ const teamMembers = [
     name: "Abdul Wasay Khan",
     role: "Vice President",
     image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCBwjHaL9B8FzhamOgfdMZRNuKtXnECiWJGqAY",
-    bio: "Sainz may drive smooth, but I lead smoother",
+    bio: "Sainz May Drive Smooth, But I Lead Smoother!!",
     social: {
       linkedin: "https://www.linkedin.com/in/abdul-wasay-khan-a90532289/",
       github: "https://github.com/AlWasay125"
@@ -42,7 +42,7 @@ const teamMembers = [
     name: "Rabia Ishtiaq",
     role: "Treasurer",
     image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCwHyhfphKJeWIF9oip0K17yASMaVfgRuzbtLU",
-    bio: "Doing my part — multitasking wasn't in the job description, but here I am",
+    bio: "Doing my part — multitasking wasn't in the job description, but here I am.",
     social: {
       linkedin: "https://www.linkedin.com/in/rabia-ishtiaq-08aa92218/",
       github: "https://github.com/rabbiya987"
@@ -53,7 +53,7 @@ const teamMembers = [
     name: "Syed Usaiym Junaid",
     role: "General Secretary",
     image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCUzh7gHkebuB3iJat1HZ6W2n5fzL8glyQXjso",
-    bio: "Focused on security awareness and event management",
+    bio: "I’m the unsung hero of every task — always there, never noticed.",
     social: {
       linkedin: "https://www.linkedin.com/in/syed-usaiym-junaid-062a0129a/",
       github: "https://github.com/Usaim-12Junaid"
@@ -75,7 +75,7 @@ const teamMembers = [
     name: "Hafsah Anwaar Ali",
     role: "Media Manager",
     image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCyDX9nNJaWgSzIZY7360NOjnElqcLr2wAmh1p",
-    bio: "I don't need a vacation. I need a hydration break... but let's post one more story",
+    bio: "I don't need a vacation. I need a hydration break... but let's post one more story.",
     social: {
       linkedin: "https://pk.linkedin.com/in/hafsah-anwaar-ali-026748290",
       github: "https://github.com/hafsa-anwaar"
