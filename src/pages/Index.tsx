@@ -10,6 +10,7 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { setupScrollReveal } from '@/utils/scrollReveal';
 import createCursorTrail from '@/utils/cursorTrail';
+import VisionSection from '@/components/VisionSection';
 
 const Index = () => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const Index = () => {
       <EventsSection />
       <CollaboratorsSection />
       <GallerySection />
+      <VisionSection />
       <TeamSection />
       <Footer />
       <ScrollToTop />

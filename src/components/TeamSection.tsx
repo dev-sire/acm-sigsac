@@ -17,20 +17,9 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Shahbaz Ali",
-    role: "Senior Vice President",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWC5sMwZYTMj2dyIRrVvCucbJ7xiqN09epHk1oA",
-    bio: "Fear never builds the future, but hope does.",
-    social: {
-      linkedin: "#",
-      github: "#"
-    }
-  },
-  {
-    id: 3,
     name: "Abdul Wasay Khan",
     role: "Vice President",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCBwjHaL9B8FzhamOgfdMZRNuKtXnECiWJGqAY",
+    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCF0WzB28GHf8T174srL6NXcJQx0CWmY3dgi2t",
     bio: "Sainz May Drive Smooth, But I Lead Smoother!!",
     social: {
       linkedin: "https://www.linkedin.com/in/abdul-wasay-khan-a90532289/",
@@ -38,7 +27,7 @@ const teamMembers = [
     }
   },
   {
-    id: 4,
+    id: 3,
     name: "Rabia Ishtiaq",
     role: "Treasurer",
     image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCwHyhfphKJeWIF9oip0K17yASMaVfgRuzbtLU",
@@ -49,7 +38,7 @@ const teamMembers = [
     }
   },
   {
-    id: 5,
+    id: 4,
     name: "Syed Usaiym Junaid",
     role: "General Secretary",
     image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCUzh7gHkebuB3iJat1HZ6W2n5fzL8glyQXjso",
@@ -60,7 +49,7 @@ const teamMembers = [
     }
   },
   {
-    id: 6,
+    id: 5,
     name: "Ammara Qazi",
     role: "Joint Information Secretary",
     image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCFTOaRp8GHf8T174srL6NXcJQx0CWmY3dgi2t",
@@ -68,6 +57,17 @@ const teamMembers = [
     social: {
       linkedin: "https://www.linkedin.com/in/ammara-qazi-0363492a0",
       github: "https://github.com/ammara-qazi"
+    }
+  },
+  {
+    id: 6,
+    name: "Aman Shahid",
+    role: "Tech Leader",
+    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCsbZGzleqgiL5SxbN3oZVARDaldO1zmXCpvrF",
+    bio: "AI can't replace me—my bugs are too advanced.",
+    social: {
+      linkedin: "https://www.linkedin.com/in/aman-shahid-32708a2b7/",
+      github: "https://github.com/dev-sire"
     }
   },
   {
@@ -83,13 +83,13 @@ const teamMembers = [
   },
   {
     id: 8,
-    name: "Aman Shahid",
-    role: "Tech Leader",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWC2V2uRK3GExWCVnD7QlMeqjkAYaOvyL6gtp8z",
-    bio: "AI can't replace me—my bugs are too advanced.",
+    name: "Sofia Asif",
+    role: "Director of Treasurer",
+    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCtrNXc579xKBFayRLuh1I6DbSJfG5vNZOcAtT",
+    bio: "Handles money so well, even our coins report to them!",
     social: {
-      linkedin: "https://www.linkedin.com/in/aman-shahid-32708a2b7/",
-      github: "https://github.com/dev-sire"
+      linkedin: "https://www.linkedin.com/in/sofia-asif-19bb5a2b3/",
+      github: "https://github.com/SOFIA-ASIF"
     }
   },
   {
@@ -100,7 +100,7 @@ const teamMembers = [
     bio: "Lens in one hand, stress in the other — still gets the perfect shot.",
     social: {
       linkedin: "https://www.linkedin.com/in/ubaid-raza-b41029299/",
-      github: "https://github.com/ammara-qazi"
+      github: " https://github.com/UBAIDRAZA98"
     }
   },
 ];
@@ -213,10 +213,10 @@ const TeamSection = () => {
                       </p>
                       
                       <div className={`flex justify-center space-x-4 transition-all duration-500 ${isDecrypted ? 'opacity-100' : 'opacity-30'}`}>
-                        <a href={member.social.linkedin} className={`transition-colors ${isDecrypted ? 'text-white/70 hover:text-cyber-neon' : 'text-white/30'}`}>
+                        <a target='_blank' href={member.social.linkedin} className={`transition-colors ${isDecrypted ? 'text-white/70 hover:text-cyber-neon' : 'text-white/30'}`}>
                           <Linkedin size={18} />
                         </a>
-                        <a href={member.social.github} className={`transition-colors ${isDecrypted ? 'text-white/70 hover:text-cyber-neon' : 'text-white/30'}`}>
+                        <a target='_blank' href={member.social.github} className={`transition-colors ${isDecrypted ? 'text-white/70 hover:text-cyber-neon' : 'text-white/30'}`}>
                           <Github size={18} />
                         </a>
                       </div>

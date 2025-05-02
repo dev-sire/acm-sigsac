@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import * as THREE from 'three';
 import SideAnimations from './SideAnimations';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -459,8 +460,8 @@ const HeroSection = () => {
             <Button size="lg" className="bg-cyber-neon hover:bg-cyber-neon/80 text-cyber-dark">
               Join Our Community
             </Button>
-            <Button size="lg" variant="outline" className="border-cyber-neon text-cyber-neon hover:bg-cyber-neon/10">
-              Learn More
+            <Button asChild variant="outline" className="border-cyber-neon text-cyber-neon hover:bg-cyber-neon/10 text-lg px-6 py-6">
+                <Link to="/about-us">Learn More</Link>
             </Button>
           </div>
           
