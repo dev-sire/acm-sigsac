@@ -371,8 +371,8 @@ const AboutUs = () => {
     {
       name: "CTF Team",
       description: "Participates in cybersecurity competitions and develops training materials.",
-      image: "https://randomuser.me/api/portraits/group/4.jpg",
-      members: "Daniel Kim, Maya Rodriguez, Victor Cheng, Zara Malik",
+      image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCMVfXYabcCQSTWuXnByIL6j2Z89Vtd4HgJ73z",
+      members: "Aman, Wasay, Rabia, Ammara, Hafsa, Ubaid, Haris, Ayesha",
       icon: <Shield size={24} className="text-cyber-neon" />
     },
     {
@@ -551,7 +551,7 @@ const AboutUs = () => {
                     <img 
                       src={team.image} 
                       alt={team.name} 
-                      className="w-full h-48 object-cover rounded-lg border border-cyber-neon/30 mb-6 relative z-10" 
+                      className="w-full h-[320px] object-cover rounded-lg border border-cyber-neon/30 mb-6 relative z-10" 
                     />
                     
                     <div className="flex items-center gap-3 mb-2">

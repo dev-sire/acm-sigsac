@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { ShieldCheck, Shield, Lightbulb, Target, CircuitBoard } from 'lucide-react';
+import { ShieldCheck, Lightbulb, Target, CircuitBoard } from 'lucide-react';
 
 const VisionSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +33,7 @@ const VisionSection = () => {
     {
       title: "Chairperson's Vision",
       name: "Dr. Asif Aziz",
-      image: "https://randomuser.me/api/portraits/women/65.jpg",
+      image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCMeDUhl2bcCQSTWuXnByIL6j2Z89Vtd4HgJ73",
       vision: "To foster a community where cybersecurity knowledge is openly shared, creating opportunities for students to develop practical skills that address real-world security challenges.",
       position: "Chairperson, Department of Cybersecurity",
       icon: <ShieldCheck className="text-cyber-neon" size={24} />
@@ -44,7 +44,7 @@ const VisionSection = () => {
       image: "https://randomuser.me/api/portraits/men/65.jpg",
       vision: "To cultivate leaders in cybersecurity through innovative education, research contributions, and community engagement that shapes the future security landscape.",
       position: "Dean, Faculty of Computing & Information Sciences",
-      icon: <Shield className="text-cyber-neon" size={24} />
+      icon: <ShieldCheck className="text-cyber-neon" size={24} />
     }
   ];
 
