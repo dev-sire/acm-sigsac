@@ -33,7 +33,7 @@ const Navbar = () => {
             {/* <div className="w-10 h-10 rounded-full bg-cyber-neon animate-pulse-glow"></div> */}
             <img src='/logo.png' className='w-[40px] h-[40px]' />
             <span className="text-xl font-bold text-white">
-              ACM <span className="text-cyber-neon">SIGSAC</span>
+              ACM <span className="text-cyber-neon">SIGSAC</span> DUET
             </span>
           </div>
 

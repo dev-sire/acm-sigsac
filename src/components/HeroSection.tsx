@@ -4,10 +4,12 @@ import { Button } from '@/components/ui/button';
 import * as THREE from 'three';
 import SideAnimations from './SideAnimations';
 import { Link } from 'react-router-dom';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const HeroSection = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const globeCanvasRef = useRef<HTMLCanvasElement>(null);
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     // Setup for the dot pattern canvas
@@ -128,155 +130,144 @@ const HeroSection = () => {
     };
   }, []);
 
-  // Initialize the 3D Earth globe
   // useEffect(() => {
   //   // Check if we're in a browser environment
   //   if (typeof window === 'undefined') return;
 
-  //   // Three.js setup for Earth globe
+  //   // --- Scene Setup ---
   //   const scene = new THREE.Scene();
   //   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    
-  //   // Create renderer
+
+  //   // --- Renderer ---
   //   const renderer = new THREE.WebGLRenderer({
   //     canvas: globeCanvasRef.current!,
   //     alpha: true,
-  //     antialias: true
+  //     antialias: false, // Disable antialiasing for performance
   //   });
   //   renderer.setSize(window.innerWidth, window.innerHeight);
-  //   renderer.setPixelRatio(window.devicePixelRatio);
-    
-  //   // Create Earth sphere
-  //   const geometry = new THREE.SphereGeometry(2.5, 64, 64);
-    
-  //   // Digital Earth material
+  //   renderer.setPixelRatio(Math.min(0.8, window.devicePixelRatio)); // Limit pixel ratio
+
+  //   // --- Globe Geometry ---
+  //   const geometry = new THREE.SphereGeometry(2.5, 32, 32); // Reduced segments
+
+  //   // --- Globe Material ---
   //   const material = new THREE.MeshBasicMaterial({
   //     color: 0x33C3F0,
   //     wireframe: true,
   //     transparent: true,
-  //     opacity: 0.4 // Dimmer
+  //     opacity: 0.3, // Slightly more subtle
   //   });
-    
+
   //   const globe = new THREE.Mesh(geometry, material);
   //   scene.add(globe);
-    
-  //   // Create atmosphere glow
-  //   const atmosphereGeometry = new THREE.SphereGeometry(2.55, 64, 64);
+
+  //   // --- Atmosphere ---
+  //   const atmosphereGeometry = new THREE.SphereGeometry(2.6, 32, 32); // Reduced segments
   //   const atmosphereMaterial = new THREE.MeshBasicMaterial({
   //     color: 0x33C3F0,
   //     transparent: true,
-  //     opacity: 0.05, // Dimmer glow
-  //     side: THREE.BackSide
+  //     opacity: 0.04, // Even more subtle
+  //     side: THREE.BackSide,
   //   });
   //   const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
   //   scene.add(atmosphere);
-    
-  //   // Add data points on surface (simulating connected nodes)
-  //   const createDataPoint = (lat: number, lng: number, size: number, color: number) => {
+
+  //   // --- Data Points ---
+  //   const points: THREE.Mesh[] = [];
+  //   const numPoints = 10; // Reduced number of points
+  //   const pointSize = 0.025; // Smaller points
+
+  //   const createDataPoint = (lat: number, lng: number, color: number) => {
   //     const phi = (90 - lat) * (Math.PI / 180);
   //     const theta = (lng + 180) * (Math.PI / 180);
-      
-  //     const pointGeometry = new THREE.SphereGeometry(size, 8, 8);
+
+  //     const pointGeometry = new THREE.SphereGeometry(pointSize, 6, 6); // Very low poly
   //     const pointMaterial = new THREE.MeshBasicMaterial({ color });
   //     const point = new THREE.Mesh(pointGeometry, pointMaterial);
-      
-  //     // Convert lat/lng to cartesian coordinates
+
   //     const x = -(2.5 * Math.sin(phi) * Math.cos(theta));
   //     const y = 2.5 * Math.cos(phi);
   //     const z = 2.5 * Math.sin(phi) * Math.sin(theta);
-      
+
   //     point.position.set(x, y, z);
   //     return point;
   //   };
-    
-  //   // Add some data points randomly
-  //   const points: THREE.Mesh[] = [];
-  //   for (let i = 0; i < 20; i++) {
+
+  //   for (let i = 0; i < numPoints; i++) {
   //     const lat = Math.random() * 180 - 90;
   //     const lng = Math.random() * 360 - 180;
-  //     const point = createDataPoint(lat, lng, 0.03 + Math.random() * 0.03, 0x9b87f5);
+  //     const color = 0x9b87f5;
+  //     const point = createDataPoint(lat, lng, color);
   //     globe.add(point);
   //     points.push(point);
   //   }
-    
-  //   // Create connection lines between points
+
+  //   // --- Connection Lines ---
   //   const connectionLines: THREE.Line[] = [];
-    
-  //   // Connect some points with lines
-  //   for (let i = 0; i < 15; i++) {
-  //     const startPoint = Math.floor(Math.random() * points.length);
-  //     let endPoint = Math.floor(Math.random() * points.length);
-      
-  //     // Ensure we don't connect a point to itself
-  //     while (endPoint === startPoint) {
-  //       endPoint = Math.floor(Math.random() * points.length);
+  //   const numConnections = 5; // Further reduced connections (was 8)
+  //   for (let i = 0; i < numConnections; i++) {
+  //     const startPointIndex = Math.floor(Math.random() * points.length);
+  //     let endPointIndex = Math.floor(Math.random() * points.length);
+  //     while (endPointIndex === startPointIndex) {
+  //       endPointIndex = Math.floor(Math.random() * points.length);
   //     }
-      
-  //     const lineGeometry = new THREE.BufferGeometry().setFromPoints([
-  //       points[startPoint].position,
-  //       points[endPoint].position
-  //     ]);
-      
-  //     const lineMaterial = new THREE.LineBasicMaterial({ 
-  //       color: 0x33C3F0, 
+
+  //     const startPoint = points[startPointIndex].position;
+  //     const endPoint = points[endPointIndex].position;
+
+  //     const lineGeometry = new THREE.BufferGeometry().setFromPoints([startPoint, endPoint]);
+  //     const lineMaterial = new THREE.LineBasicMaterial({
+  //       color: 0x33C3F0,
   //       transparent: true,
-  //       opacity: 0.4
+  //       opacity: 0.15, // Very faint lines
+  //       linewidth: 1,
   //     });
-      
   //     const line = new THREE.Line(lineGeometry, lineMaterial);
   //     scene.add(line);
   //     connectionLines.push(line);
-      
-  //     // Animate the line
-  //     const animateLine = (line: THREE.Line) => {
-  //       const material = line.material as THREE.LineBasicMaterial;
-  //       let direction = 0.005;
-  //       let opacity = material.opacity || 0.4;
-        
-  //       setInterval(() => {
-  //         opacity += direction;
-  //         if (opacity >= 0.8 || opacity <= 0.2) {
-  //           direction = -direction;
-  //         }
-  //         material.opacity = opacity;
-  //       }, 50);
-  //     };
-      
-  //     animateLine(line);
   //   }
-    
-  //   // Position camera
-  //   camera.position.z = 5;
-    
-  //   // Animation loop
+
+  //   // --- Camera Position ---
+  //   camera.position.z = 4; // Closer camera
+
+  //   // --- Animation ---
+  //   let rotationSpeed = 0.001; // Even faster rotation (was 0.0005)
   //   const animate = () => {
   //     requestAnimationFrame(animate);
-      
-  //     // Rotate the globe
-  //     globe.rotation.y += 0.002;
-  //     atmosphere.rotation.y += 0.002;
-      
+
+  //     globe.rotation.y += rotationSpeed;
+  //     atmosphere.rotation.y += rotationSpeed;
+
   //     renderer.render(scene, camera);
   //   };
-    
-  //   // Start animation
+
   //   animate();
-    
-  //   // Handle window resize
+
+  //   // --- Resize Handling ---
   //   const handleResize = () => {
   //     camera.aspect = window.innerWidth / window.innerHeight;
   //     camera.updateProjectionMatrix();
   //     renderer.setSize(window.innerWidth, window.innerHeight);
   //   };
-    
+
   //   window.addEventListener('resize', handleResize);
-    
-  //   // Cleanup function
+
+  //   // --- Cleanup ---
   //   return () => {
   //     window.removeEventListener('resize', handleResize);
   //     renderer.dispose();
+  //     geometry.dispose();
+  //     material.dispose();
+  //     atmosphereGeometry.dispose();
+  //     atmosphereMaterial.dispose();
+  //     points.forEach(point => {
+  //       point.geometry.dispose();
+  //       point.material.dispose();
+  //     });
   //     connectionLines.forEach(line => {
-  //       scene.remove(line);
+  //       line.geometry.dispose();
+  //       line.material.dispose();
+  //       scene.remove(line); // Remove lines from scene
   //     });
   //   };
   // }, []);
@@ -287,7 +278,12 @@ const HeroSection = () => {
 
     // --- Scene Setup ---
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
 
     // --- Renderer ---
     const renderer = new THREE.WebGLRenderer({
@@ -299,7 +295,8 @@ const HeroSection = () => {
     renderer.setPixelRatio(Math.min(0.8, window.devicePixelRatio)); // Limit pixel ratio
 
     // --- Globe Geometry ---
-    const geometry = new THREE.SphereGeometry(2.5, 32, 32); // Reduced segments
+    const globeRadius = isMobile ? 1.5 : 2.5; // Smaller radius on mobile
+    const geometry = new THREE.SphereGeometry(globeRadius, 32, 32); // Reduced segments
 
     // --- Globe Material ---
     const material = new THREE.MeshBasicMaterial({
@@ -313,7 +310,8 @@ const HeroSection = () => {
     scene.add(globe);
 
     // --- Atmosphere ---
-    const atmosphereGeometry = new THREE.SphereGeometry(2.6, 32, 32); // Reduced segments
+    const atmosphereRadius = isMobile ? 1.6 : 2.6; // Smaller radius on mobile
+    const atmosphereGeometry = new THREE.SphereGeometry(atmosphereRadius, 32, 32); // Reduced segments
     const atmosphereMaterial = new THREE.MeshBasicMaterial({
       color: 0x33C3F0,
       transparent: true,
@@ -325,8 +323,8 @@ const HeroSection = () => {
 
     // --- Data Points ---
     const points: THREE.Mesh[] = [];
-    const numPoints = 10; // Reduced number of points
-    const pointSize = 0.025; // Smaller points
+    const numPoints = isMobile ? 5 : 10; // Fewer points on mobile
+    const pointSize = isMobile ? 0.015 : 0.025; // Smaller points on mobile
 
     const createDataPoint = (lat: number, lng: number, color: number) => {
       const phi = (90 - lat) * (Math.PI / 180);
@@ -336,9 +334,9 @@ const HeroSection = () => {
       const pointMaterial = new THREE.MeshBasicMaterial({ color });
       const point = new THREE.Mesh(pointGeometry, pointMaterial);
 
-      const x = -(2.5 * Math.sin(phi) * Math.cos(theta));
-      const y = 2.5 * Math.cos(phi);
-      const z = 2.5 * Math.sin(phi) * Math.sin(theta);
+      const x = -(globeRadius * Math.sin(phi) * Math.cos(theta)); // Use globeRadius
+      const y = globeRadius * Math.cos(phi);
+      const z = globeRadius * Math.sin(phi) * Math.sin(theta);
 
       point.position.set(x, y, z);
       return point;
@@ -355,7 +353,7 @@ const HeroSection = () => {
 
     // --- Connection Lines ---
     const connectionLines: THREE.Line[] = [];
-    const numConnections = 5; // Further reduced connections (was 8)
+    const numConnections = isMobile ? 2 : 5; // Even fewer connections on mobile
     for (let i = 0; i < numConnections; i++) {
       const startPointIndex = Math.floor(Math.random() * points.length);
       let endPointIndex = Math.floor(Math.random() * points.length);
@@ -366,7 +364,10 @@ const HeroSection = () => {
       const startPoint = points[startPointIndex].position;
       const endPoint = points[endPointIndex].position;
 
-      const lineGeometry = new THREE.BufferGeometry().setFromPoints([startPoint, endPoint]);
+      const lineGeometry = new THREE.BufferGeometry().setFromPoints([
+        startPoint,
+        endPoint,
+      ]);
       const lineMaterial = new THREE.LineBasicMaterial({
         color: 0x33C3F0,
         transparent: true,
@@ -379,7 +380,7 @@ const HeroSection = () => {
     }
 
     // --- Camera Position ---
-    camera.position.z = 4; // Closer camera
+    camera.position.z = isMobile ? 3 : 4; // Closer camera on mobile
 
     // --- Animation ---
     let rotationSpeed = 0.001; // Even faster rotation (was 0.0005)
@@ -411,17 +412,18 @@ const HeroSection = () => {
       material.dispose();
       atmosphereGeometry.dispose();
       atmosphereMaterial.dispose();
-      points.forEach(point => {
+      points.forEach((point) => {
         point.geometry.dispose();
         point.material.dispose();
       });
-      connectionLines.forEach(line => {
+      connectionLines.forEach((line) => {
         line.geometry.dispose();
         line.material.dispose();
         scene.remove(line); // Remove lines from scene
       });
     };
-  }, []);
+  }, [isMobile]); // Add isMobile to the dependency array
+
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -461,7 +463,7 @@ const HeroSection = () => {
               Join Our Community
             </Button>
             <Button asChild variant="outline" className="border-cyber-neon text-cyber-neon hover:bg-cyber-neon/10 text-lg px-6 py-6">
-                <Link to="/about-us">Learn More</Link>
+                <Link to="/about-us">About Us</Link>
             </Button>
           </div>
           

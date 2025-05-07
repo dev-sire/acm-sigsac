@@ -34,7 +34,7 @@ const VisionSection = () => {
       title: "Chairperson's Vision",
       name: "Dr. Asif Aziz",
       image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCMeDUhl2bcCQSTWuXnByIL6j2Z89Vtd4HgJ73",
-      vision: "To foster a community where cybersecurity knowledge is openly shared, creating opportunities for students to develop practical skills that address real-world security challenges.",
+      vision: "Welcome! I am excited to guide you on your journey in this essential field, with dedication to equipping you with the skills and knowledge to flourish in the ever-evolving world of cyber security. Our department is committed to fostering a learning environment that encourages innovation, critical thinking, and ethical practices. Whether you are just beginning your journey or advancing your expertise, we are here to support you every step of the way. \n Together, let's build a secure digital future.",
       position: "Chairperson, Department of Cybersecurity",
       icon: <ShieldCheck className="text-cyber-neon" size={24} />
     },
@@ -92,7 +92,7 @@ const VisionSection = () => {
             <div className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyber-neon to-transparent"></div>
           </h2>
           <p className="max-w-2xl mx-auto text-white/70">
-            ACM SIGSAC aims to create a vibrant community of cybersecurity enthusiasts, practitioners, and leaders who are equipped with cutting-edge knowledge and skills to excel in the rapidly evolving field of information security.
+            ACM SIGSAC DUET aims to create a vibrant community of cybersecurity enthusiasts, practitioners, and leaders who are equipped with cutting-edge knowledge and skills to excel in the rapidly evolving field of information security.
           </p>
         </div>
         
@@ -147,7 +147,7 @@ const VisionSection = () => {
                 <div className="flex items-center mb-6">
                   <div className="relative w-20 h-20 mr-4">
                     {/* Animated glow effect */}
-                    <div className="absolute inset-0 rounded-full bg-cyber-neon/20 animate-pulse-glow"></div>
+                    <div className="absolute inset-0 rounded-full animate-pulse-glow"></div>
                     <img 
                       src={card.image} 
                       alt={card.name} 

@@ -92,7 +92,7 @@ const CollaboratorsSection = () => {
           <div className="inline-block border border-white/10 bg-white/5 rounded-lg p-6 max-w-3xl">
             <h3 className="text-xl mb-4 text-cyber-neon">Become a Partner</h3>
             <p className="text-white/70 mb-6">
-              Interested in collaborating with ACM SIGSAC? We're always looking 
+              Interested in collaborating with ACM SIGSAC DUET? We're always looking 
               for partners who share our passion for cybersecurity education.
             </p>
             <button className="px-6 py-2 bg-cyber-neon text-cyber-dark font-medium rounded-md hover:bg-cyber-neon/80 transition-colors">

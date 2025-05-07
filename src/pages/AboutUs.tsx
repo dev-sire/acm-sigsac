@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { setupScrollReveal } from '@/utils/scrollReveal';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import createCursorTrail from '@/utils/cursorTrail';
-import { CircuitBoard, Shield, Network, Cpu, Database, BrainCircuit } from 'lucide-react';
+import { CircuitBoard, Shield, Network, Cpu, Database, BrainCircuit, AlertTriangle, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -20,6 +20,7 @@ interface TeamType {
 const AboutUs = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const headerRef = useRef<HTMLDivElement>(null);
+  const advocacyRef = useRef<HTMLDivElement>(null);
   const executiveRef = useRef<HTMLDivElement>(null);
   const teamsRef = useRef<HTMLDivElement>(null);
 
@@ -53,8 +54,9 @@ const AboutUs = () => {
     };
     
     const cleanup1 = observeSection(headerRef, 'header');
-    const cleanup2 = observeSection(executiveRef, 'executive');
-    const cleanup3 = observeSection(teamsRef, 'teams');
+    const cleanup2 = observeSection(advocacyRef, 'advocacy');
+    const cleanup3 = observeSection(executiveRef, 'executive');
+    const cleanup4 = observeSection(teamsRef, 'teams');
     
     // Create cyber grid effect
     const createCyberGrid = () => {
@@ -339,6 +341,7 @@ const AboutUs = () => {
       cleanup1();
       cleanup2();
       cleanup3();
+      cleanup4();
       gridCleanup();
       packetsCleanup();
       circuitCleanup();
@@ -349,7 +352,7 @@ const AboutUs = () => {
   const executiveTeam = {
     name: "Executive Body",
     description: "The leadership team that guides our chapter's vision and strategic direction.",
-    image: "/group.jpg",
+    image: "https://randomuser.me/api/portraits/group/1.jpg",
     members: "Alex Johnson, Sarah Williams, Michael Chen, Emily Rodriguez, David Lee, Lisa Kumar"
   };
 
@@ -371,8 +374,8 @@ const AboutUs = () => {
     {
       name: "CTF Team",
       description: "Participates in cybersecurity competitions and develops training materials.",
-      image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCMVfXYabcCQSTWuXnByIL6j2Z89Vtd4HgJ73z",
-      members: "Aman, Wasay, Rabia, Ammara, Hafsa, Ubaid, Haris, Ayesha",
+      image: "https://randomuser.me/api/portraits/group/4.jpg",
+      members: "Daniel Kim, Maya Rodriguez, Victor Cheng, Zara Malik",
       icon: <Shield size={24} className="text-cyber-neon" />
     },
     {
@@ -431,6 +434,11 @@ const AboutUs = () => {
             {/* Navigation dots */}
             <div className="mt-12 flex justify-center gap-4">
               <a 
+                href="#advocacy" 
+                className={`w-3 h-3 rounded-full transition-all ${activeSection === 'advocacy' ? 'bg-cyber-neon scale-125' : 'bg-white/30'}`}
+                aria-label="Go to Media Advocacy section"
+              />
+              <a 
                 href="#executive" 
                 className={`w-3 h-3 rounded-full transition-all ${activeSection === 'executive' ? 'bg-cyber-neon scale-125' : 'bg-white/30'}`}
                 aria-label="Go to Executive Team section"
@@ -449,6 +457,114 @@ const AboutUs = () => {
                   <span className="mr-2">←</span> Back to Homepage
                 </Link>
               </Button>
+            </div>
+          </div>
+          
+          {/* Media Advocacy Section - NEW */}
+          <div id="advocacy" className="mb-24 scroll-fx" ref={advocacyRef}>
+            <div className="text-center mb-8">
+              <h2 className="text-heading-sm mb-2 relative inline-block">
+                <span className="text-cyber-neon">Media</span> Advocacy
+                <div className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyber-neon to-transparent"></div>
+              </h2>
+              <p className="max-w-2xl mx-auto text-white/70">
+                "Against digital warfare's propaganda, truth is our strategic imperative."
+              </p>
+            </div>
+            
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden card-hover relative">
+              {/* Alert decorations */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-neon/30 via-cyber-neon/70 to-cyber-neon/30"></div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-neon/30 via-cyber-neon/70 to-cyber-neon/30"></div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="p-6 relative">
+                  <div className="bg-cyber-dark/50 border border-white/5 rounded-lg p-5 h-full flex flex-col justify-center relative overflow-hidden">
+                    {/* Pulsing alert indicator */}
+                    <div className="absolute top-3 right-8 flex items-center">
+                      <span className="flex h-3 w-3 mr-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyber-neon opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-cyber-neon"></span>
+                      </span>
+                      <span className="text-xs text-cyber-neon">LIVE ISSUE</span>
+                    </div>
+                    
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-cyber-neon/10 flex items-center justify-center border border-cyber-neon/30">
+                        <AlertTriangle size={24} className="text-cyber-neon" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">Digital Misinformation Alert</h3>
+                    </div>
+                    
+                    <p className="mb-4 text-white/80 leading-relaxed">
+                      As cybersecurity advocates, we are deeply concerned about the spread of false narratives and propaganda 
+                      in the ongoing tensions between Pakistan and India. Digital warfare is as significant as physical confrontation, and manipulation 
+                      of information threatens global peace and security.
+                    </p>
+                    
+                    <div className="mb-4 flex items-center">
+                      <div className="w-8 h-8 mr-3 rounded-full bg-cyber-neon/10 flex items-center justify-center">
+                        <Globe size={18} className="text-cyber-neon" />
+                      </div>
+                      <span className="text-cyber-neon font-medium">Our Honorable Vice Chancellor's Digital Response Initiative:</span>
+                    </div>
+                    
+                    <div className="bg-white/5 border border-cyber-neon/20 rounded-md p-3 mb-4">
+                      <div className="text-sm font-mono overflow-x-auto whitespace-nowrap text-cyber-neon opacity-80 pb-1 scrollbar-thin scrollbar-thumb-cyber-neon/20 scrollbar-track-transparent">
+                        #DUETSocialmediawarriorsagainstindianaggression
+                      </div>
+                    </div>
+                    
+                    <p className="text-sm text-white/70">
+                      Join us in promoting fact-based discourse and countering digital propaganda that aims to distort reality. 
+                      Truth is our strongest defensive measure in the age of information warfare.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-semibold mb-4 text-white">Our Advocacy Position</h3>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <div className="mt-1 mr-3 text-cyber-neon">01</div>
+                      <p className="text-white/80">
+                        <span className="text-cyber-neon font-medium">Fact Verification:</span> We are committed to combating false narratives by 
+                        verifying information before sharing and encouraging critical media literacy among our community.
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="mt-1 mr-3 text-cyber-neon">02</div>
+                      <p className="text-white/80">
+                        <span className="text-cyber-neon font-medium">Digital Awareness:</span> We recognize how international media can be manipulated 
+                        to shape global perception, and we stand against all forms of digital misinformation.
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="mt-1 mr-3 text-cyber-neon">03</div>
+                      <p className="text-white/80">
+                        <span className="text-cyber-neon font-medium">Responsible Engagement:</span> As technology students, we have a responsibility 
+                        to ensure digital platforms serve as channels for truth rather than vehicles for propaganda.
+                      </p>
+                    </div>
+                    
+                    <div className="mt-4">
+                      <Button variant="outline" className="border-cyber-neon/30 text-cyber-neon hover:bg-cyber-neon/10">
+                        Join Our Initiative
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Binary code decoration */}
+              <div className="absolute bottom-2 right-2 text-[10px] font-mono text-cyber-neon/10 select-none pointer-events-none">
+                01010100 01110010 01110101 01110100 01101000<br />
+                01000001 01100010 01101111 01110110 01100101<br />
+                01010000 01110010 01101111 01110000 01100001
+              </div>
             </div>
           </div>
           
@@ -551,7 +667,7 @@ const AboutUs = () => {
                     <img 
                       src={team.image} 
                       alt={team.name} 
-                      className="w-full h-[320px] object-cover rounded-lg border border-cyber-neon/30 mb-6 relative z-10" 
+                      className="w-full h-48 object-cover rounded-lg border border-cyber-neon/30 mb-6 relative z-10" 
                     />
                     
                     <div className="flex items-center gap-3 mb-2">

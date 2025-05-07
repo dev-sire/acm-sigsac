@@ -14,12 +14,12 @@ const Footer = () => {
               {/* <div className="w-8 h-8 rounded-full bg-cyber-neon"></div> */}
               <img src='/logo.png' className='w-[40px] h-[40px]' />
               <span className="text-xl font-bold text-white">
-                ACM <span className="text-cyber-neon">SIGSAC</span>
+                ACM <span className="text-cyber-neon">SIGSAC</span> DUET
               </span>
             </div>
             
             <p className="text-white/70 mb-6">
-              ACM SIGSAC is the student club of the Cybersecurity department at Dawood University, 
+              ACM SIGSAC DUET is the student club of the Cybersecurity department at Dawood University, 
               dedicated to advancing knowledge in cybersecurity through innovation, 
               collaboration, and hands-on learning.
             </p>
@@ -132,7 +132,10 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-12 pt-8 text-center">
           <p className="text-white/50">
-            © {new Date().getFullYear()} ACM SIGSAC. All rights reserved.
+            Developed By: <a target='_blank' href='https://github.com/dev-sire'></a>@dev-sire
+          </p>
+          <p className="text-white/50">
+            © {new Date().getFullYear()} ACM SIGSAC DUET. All rights reserved.
           </p>
         </div>
       </div>

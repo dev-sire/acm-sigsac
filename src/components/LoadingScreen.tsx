@@ -52,7 +52,7 @@ const LoadingScreen = ({ onLoaded }: LoadingScreenProps) => {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <div className="text-5xl font-bold text-cyber-neon mb-2">ACM SIGSAC</div>
+          <div className="text-5xl font-bold text-cyber-neon mb-2">ACM SIGSAC DUET</div>
           <div className="text-xl text-white/70">Cybersecurity Student Society</div>
         </motion.div>
 

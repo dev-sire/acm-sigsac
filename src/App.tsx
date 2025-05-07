@@ -10,6 +10,7 @@ import Registration from "./pages/Registration";
 import AboutUs from "./pages/AboutUs";
 import { useEffect, useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
+import { Analytics } from "@vercel/analytics/react";
 import Gallery from "./pages/Gallery";
 
 // Create a client
@@ -39,23 +40,26 @@ const App = () => {
     )
   }
   return(
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/registration" element={<Registration />} />
-            <Route path="/registration/:eventType" element={<Registration />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/gallery" element={<Gallery />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/registration" element={<Registration />} />
+              <Route path="/registration/:eventType" element={<Registration />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/gallery" element={<Gallery />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+      <Analytics />
+    </>
   );
 }
 
