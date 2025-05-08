@@ -62,6 +62,11 @@
   }
 }
 
+::selection{
+  color: #1A1F2C;
+  background-color: rgb(51 195 240);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 12px;

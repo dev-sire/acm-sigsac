@@ -1,13 +1,14 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { setupScrollReveal } from '@/utils/scrollReveal';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import createCursorTrail from '@/utils/cursorTrail';
-import { CircuitBoard, Shield, Network, Cpu, Database, BrainCircuit, AlertTriangle, Globe } from 'lucide-react';
+import { CircuitBoard, Shield, Network, Cpu, Database, BrainCircuit, AlertTriangle, Globe, Copy } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { useToast } from '@/hooks/use-toast';
 
 interface TeamType {
   name: string;
@@ -23,6 +24,28 @@ const AboutUs = () => {
   const advocacyRef = useRef<HTMLDivElement>(null);
   const executiveRef = useRef<HTMLDivElement>(null);
   const teamsRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
+  const { toast } = useToast();
+  
+  const copyHashtagToClipboard = () => {
+    navigator.clipboard.writeText('#DUETSocialmediawarriorsagainstindianaggression')
+      .then(() => {
+        toast({
+          title: "Copied to clipboard",
+          description: "Hashtag copied! Use it to spread awareness.",
+          duration: 3000,
+        });
+      })
+      .catch(err => {
+        console.error('Failed to copy text: ', err);
+        toast({
+          title: "Failed to copy",
+          description: "Please try again or copy manually",
+          variant: "destructive",
+          duration: 3000,
+        });
+      });
+  };
 
   useEffect(() => {
     // Setup scroll reveal animations
@@ -467,17 +490,21 @@ const AboutUs = () => {
                 <span className="text-cyber-neon">Media</span> Advocacy
                 <div className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyber-neon to-transparent"></div>
               </h2>
-              <p className="max-w-2xl mx-auto text-white/70">
-                "Against digital warfare's propaganda, truth is our strategic imperative."
-              </p>
+              <div className="max-w-3xl mx-auto px-4 relative">
+                <div className="text-2xl text-cyber-neon/80 absolute -left-2 top-0 md:-left-6">❝</div>
+                <p className="italic text-white/80 px-6">
+                  In the digital age, truth is our most powerful weapon against propaganda. We stand united against misinformation that threatens peace.
+                </p>
+                <div className="text-2xl text-cyber-neon/80 absolute -right-2 bottom-0 md:-right-6">❞</div>
+              </div>
             </div>
             
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden card-hover relative">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden md:overflow-visible card-hover relative">
               {/* Alert decorations */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-neon/30 via-cyber-neon/70 to-cyber-neon/30"></div>
               <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-neon/30 via-cyber-neon/70 to-cyber-neon/30"></div>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="p-6 relative">
                   <div className="bg-cyber-dark/50 border border-white/5 rounded-lg p-5 h-full flex flex-col justify-center relative overflow-hidden">
                     {/* Pulsing alert indicator */}
@@ -506,13 +533,21 @@ const AboutUs = () => {
                       <div className="w-8 h-8 mr-3 rounded-full bg-cyber-neon/10 flex items-center justify-center">
                         <Globe size={18} className="text-cyber-neon" />
                       </div>
-                      <span className="text-cyber-neon font-medium">Our Honorable Vice Chancellor's Digital Response Initiative:</span>
+                      <span className="text-cyber-neon font-medium">Our Digital Response Initiative:</span>
                     </div>
                     
-                    <div className="bg-white/5 border border-cyber-neon/20 rounded-md p-3 mb-4">
-                      <div className="text-sm font-mono overflow-x-auto whitespace-nowrap text-cyber-neon opacity-80 pb-1 scrollbar-thin scrollbar-thumb-cyber-neon/20 scrollbar-track-transparent">
+                    <div className="bg-white/5 border border-cyber-neon/20 rounded-md p-3 mb-4 relative">
+                      <div className="text-sm font-mono text-cyber-neon opacity-80 pb-1 overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-cyber-neon/20 scrollbar-track-transparent pr-10">
                         #DUETSocialmediawarriorsagainstindianaggression
                       </div>
+                      <button 
+                        onClick={copyHashtagToClipboard}
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 bg-cyber-neon/10 rounded hover:bg-cyber-neon/20 transition-colors"
+                        aria-label="Copy hashtag to clipboard"
+                        title="Copy to clipboard"
+                      >
+                        <Copy size={16} className="text-cyber-neon" />
+                      </button>
                     </div>
                     
                     <p className="text-sm text-white/70">

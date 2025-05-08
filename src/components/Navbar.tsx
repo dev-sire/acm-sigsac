@@ -65,35 +65,35 @@ const Navbar = () => {
           <div className="md:hidden mt-4 py-4 bg-cyber-dark/95 backdrop-blur-lg rounded-lg animate-fade-in">
             <div className="flex flex-col space-y-4 px-4">
               <a 
-                href="#home" 
+                href="/" 
                 className="text-white py-2 hover:text-cyber-neon transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </a>
               <a 
-                href="#events" 
+                href="/#events" 
                 className="text-white py-2 hover:text-cyber-neon transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Events
               </a>
               <a 
-                href="#collaborators" 
+                href="/#collaborators" 
                 className="text-white py-2 hover:text-cyber-neon transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Collaborators
               </a>
               <a 
-                href="#gallery" 
+                href="/#gallery" 
                 className="text-white py-2 hover:text-cyber-neon transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Gallery
               </a>
               <a 
-                href="#team" 
+                href="/#team" 
                 className="text-white py-2 hover:text-cyber-neon transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >

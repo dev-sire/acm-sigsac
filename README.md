@@ -33,6 +33,7 @@ This website is built using a modern and powerful technology stack:
 ```
 📦 acm-sigsac
 ├─ .gitignore
+├─ LICENSE
 ├─ README.md
 ├─ bun.lockb
 ├─ components.json
@@ -57,11 +58,13 @@ This website is built using a modern and powerful technology stack:
 │  │  ├─ Footer.tsx
 │  │  ├─ GallerySection.tsx
 │  │  ├─ HeroSection.tsx
+│  │  ├─ LoadingScreen.tsx
 │  │  ├─ Navbar.tsx
 │  │  ├─ RegistrationForm.tsx
 │  │  ├─ ScrollToTop.tsx
 │  │  ├─ SideAnimations.tsx
 │  │  ├─ TeamSection.tsx
+│  │  ├─ VisionSection.tsx
 │  │  └─ ui
 │  │     ├─ accordion.tsx
 │  │     ├─ alert-dialog.tsx
@@ -121,6 +124,8 @@ This website is built using a modern and powerful technology stack:
 │  │  └─ utils.ts
 │  ├─ main.tsx
 │  ├─ pages
+│  │  ├─ AboutUs.tsx
+│  │  ├─ Gallery.tsx
 │  │  ├─ Index.tsx
 │  │  ├─ NotFound.tsx
 │  │  └─ Registration.tsx
