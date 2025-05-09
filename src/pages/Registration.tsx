@@ -23,6 +23,10 @@ const Registration = () => {
     } else if (eventType === 'demogoron-debuggers') {
       setEventTitle('Demogoron Debuggers');
       setEventDescription('Speed Programming Contest - Show off your problem-solving skills and coding speed. Limited to 100 participants.');
+    }
+    else if (eventType === 'seminars') {
+      setEventTitle('Psyber Arena Seminars');
+      setEventDescription('2 Days seminars on blue and red teaming by industrial experts and seniors');
     } else {
       setEventTitle('Event Registration');
       setEventDescription('Register for our upcoming cybersecurity events.');
