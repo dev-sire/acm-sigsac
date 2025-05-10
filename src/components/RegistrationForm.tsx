@@ -15,9 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { registrationService, RegistrationData } from "@/lib/supabase";
-import { Loader2 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -39,7 +37,6 @@ interface RegistrationFormProps {
 const RegistrationForm = ({ eventType }: RegistrationFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  const navigate = useNavigate();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -61,13 +58,22 @@ const RegistrationForm = ({ eventType }: RegistrationFormProps) => {
     setIsSubmitting(true);
 
     try {
-      // Normalize event type for database table naming
-      const normalizedEventType = eventType === 'general' ? 'general' : 
-        eventType === 'hackemon-ctf' ? 'hackemon_ctf' : 
-        eventType === 'demogoron-debuggers' ? 'demogoron_debuggers' : 'general';
-      
-      // Submit registration to Supabase
-      await registrationService.submitRegistration(normalizedEventType, data as RegistrationData);
+      // Insert data into Supabase
+      const { data: registrationData, error } = await supabase
+        .from('event_registrations')
+        .insert({
+          event_type: eventType,
+          name: data.name,
+          father_name: data.fatherName,
+          email: data.email,
+          phone: data.phone,
+          roll_no: data.rollNo,
+          department: data.department,
+          university: data.university,
+        })
+        .select();
+
+      if (error) throw error;
       
       toast({
         title: "Registration Successful!",
@@ -75,35 +81,14 @@ const RegistrationForm = ({ eventType }: RegistrationFormProps) => {
       });
       
       form.reset();
-      
-      // Redirect to home after successful registration
-      setTimeout(() => {
-        navigate('/');
-      }, 2000);
 
     } catch (error: any) {
       console.error("Registration error:", error);
-      
-      // Show specific error messages
-      if (error.message?.includes('limit reached')) {
-        toast({
-          title: "Registration Failed",
-          description: "Registration limit for this event has been reached (100 participants maximum).",
-          variant: "destructive",
-        });
-      } else if (error.message?.includes('already registered')) {
-        toast({
-          title: "Already Registered",
-          description: "You have already registered for this event with this email address.",
-          variant: "destructive",
-        });
-      } else {
-        toast({
-          title: "Registration Failed",
-          description: "There was a problem submitting your registration. Please try again.",
-          variant: "destructive",
-        });
-      }
+      toast({
+        title: "Registration Failed",
+        description: error.message || "There was a problem submitting your registration. Please try again.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -274,12 +259,7 @@ const RegistrationForm = ({ eventType }: RegistrationFormProps) => {
             className="w-full bg-cyber-neon hover:bg-cyber-neon/80 text-cyber-dark"
             disabled={isSubmitting}
           >
-            {isSubmitting ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Submitting...
-              </>
-            ) : "Register Now"}
+            {isSubmitting ? "Submitting..." : "Register Now"}
           </Button>
         </form>
       </Form>

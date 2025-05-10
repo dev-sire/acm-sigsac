@@ -41,8 +41,8 @@ const VisionSection = () => {
     {
       title: "Dean's Vision",
       name: "Prof. Dr. Engr. Atif Jamil",
-      image: "https://randomuser.me/api/portraits/men/65.jpg",
-      vision: "To cultivate leaders in cybersecurity through innovative education, research contributions, and community engagement that shapes the future security landscape.",
+      image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCLJi2uLtXODiK1cHEUeuAwkTNzRp9vF47Por2",
+      vision: "To cultivate leaders in cybersecurity through innovative education, research contributions, and community engagement that shapes the future security landscape. Our department is committed to fostering a learning environment that encourages innovation, critical thinking, and ethical practices. Whether you are just beginning your journey or advancing your expertise, we are here to support you every step of the way. \n Together, let's build a secure digital future.",
       position: "Dean, Faculty of Computing & Information Sciences",
       icon: <ShieldCheck className="text-cyber-neon" size={24} />
     }

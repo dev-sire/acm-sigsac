@@ -4,8 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Binary } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
 import CountdownTimer from './CountdownTimer';
+import { Button } from '@/components/ui/button';
 
 const events = [
   {
@@ -17,7 +17,8 @@ const events = [
     category: "Competition",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     slug: "hackemon-ctf",
-    registrationEnds: "2025-05-18T09:00:00" // One day before the event
+    registrationEnds: "2025-05-17T09:00:00", // One day before the event
+    isCompetition: true
   },
   {
     id: 2,
@@ -28,18 +29,20 @@ const events = [
     category: "Competition",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     slug: "demogoron-debuggers",
-    registrationEnds: "2025-05-16T08:00:00" // One day before the event
+    registrationEnds: "2025-05-17T08:00:00", // One day before the event
+    isCompetition: true
   },
   {
     id: 3,
-    title: "Psyber Arena Seminars",
+    title: "Cyber Security Seminars",
     date: "May 20, 2025",
     time: "3:00 PM - 5:00 PM",
-    location: "Main Auditorium",
+    location: "Main Campus Seminar Hall",
     category: "Panel",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     slug: "seminars",
-    registrationEnds: "2025-05-11T15:00:00" // Two days before the event
+    registrationEnds: "2025-05-17T15:00:00", // Two days before the event
+    isCompetition: false
   },
 ];
 
