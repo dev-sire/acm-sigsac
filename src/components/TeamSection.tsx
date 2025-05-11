@@ -8,7 +8,7 @@ const teamMembers = [
     id: 1,
     name: "Aayesha Murtaza",
     role: "President",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCiduliIEFqzWTvkRcJr0nN8f3BLo4d2XI9wC5",
+    image: "/candidates/aayesha.jpg",
     bio: "Titles fade, but the impact of genuine leadership endures.",
     social: {
       linkedin: "https://www.linkedin.com/in/aayesha-murtaza-7859ba267/ ",
@@ -19,7 +19,7 @@ const teamMembers = [
     id: 2,
     name: "Abdul Wasay Khan",
     role: "Vice President",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCF0WzB28GHf8T174srL6NXcJQx0CWmY3dgi2t",
+    image: "/candidates/wasay-2.jpg",
     bio: "Sainz May Drive Smooth, But I Lead Smoother!!",
     social: {
       linkedin: "https://www.linkedin.com/in/abdul-wasay-khan-a90532289/",
@@ -30,7 +30,7 @@ const teamMembers = [
     id: 3,
     name: "Rabia Ishtiaq",
     role: "Treasurer",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCwHyhfphKJeWIF9oip0K17yASMaVfgRuzbtLU",
+    image: "/candidates/rabia.jpg",
     bio: "Doing my part — multitasking wasn't in the job description, but here I am.",
     social: {
       linkedin: "https://www.linkedin.com/in/rabia-ishtiaq-08aa92218/",
@@ -41,8 +41,8 @@ const teamMembers = [
     id: 4,
     name: "Syed Usaiym Junaid",
     role: "General Secretary",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCUzh7gHkebuB3iJat1HZ6W2n5fzL8glyQXjso",
-    bio: "I’m the unsung hero of every task — always there, never noticed.",
+    image: "/candidates/usaiym.jpg",
+    bio: "I'm the unsung hero of every task — always there, never noticed.",
     social: {
       linkedin: "https://www.linkedin.com/in/syed-usaiym-junaid-062a0129a/",
       github: "https://github.com/Usaim-12Junaid"
@@ -52,7 +52,7 @@ const teamMembers = [
     id: 5,
     name: "Ammara Qazi",
     role: "Joint Information Secretary",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCFTOaRp8GHf8T174srL6NXcJQx0CWmY3dgi2t",
+    image: "/candidates/ammara.jpg",
     bio: "Society runs on my information — it goes dark when I blunder, and classified when I excel.",
     social: {
       linkedin: "https://www.linkedin.com/in/ammara-qazi-0363492a0",
@@ -63,7 +63,7 @@ const teamMembers = [
     id: 6,
     name: "Aman Shahid",
     role: "Tech Leader",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCsbZGzleqgiL5SxbN3oZVARDaldO1zmXCpvrF",
+    image: "/candidates/my-profile.jpg",
     bio: "AI can't replace me—my bugs are too advanced.",
     social: {
       linkedin: "https://www.linkedin.com/in/aman-shahid-32708a2b7/",
@@ -74,7 +74,7 @@ const teamMembers = [
     id: 7,
     name: "Hafsah Anwaar Ali",
     role: "Media Manager",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCyDX9nNJaWgSzIZY7360NOjnElqcLr2wAmh1p",
+    image: "/candidates/hafsa.jpg",
     bio: "I don't need a vacation. I need a hydration break... but let's post one more story.",
     social: {
       linkedin: "https://pk.linkedin.com/in/hafsah-anwaar-ali-026748290",
@@ -85,7 +85,7 @@ const teamMembers = [
     id: 8,
     name: "Sofia Asif",
     role: "Director of Treasurer",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCtrNXc579xKBFayRLuh1I6DbSJfG5vNZOcAtT",
+    image: "/candidates/sofia.jpg",
     bio: "Handles money so well, even our coins report to them!",
     social: {
       linkedin: "https://www.linkedin.com/in/sofia-asif-19bb5a2b3/",
@@ -96,7 +96,7 @@ const teamMembers = [
     id: 9,
     name: "Ubaid Raza",
     role: "Director of Photography",
-    image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCyn7qkmJaWgSzIZY7360NOjnElqcLr2wAmh1p",
+    image: "/candidates/ubaid.jpg",
     bio: "Lens in one hand, stress in the other — still gets the perfect shot.",
     social: {
       linkedin: "https://www.linkedin.com/in/ubaid-raza-b41029299/",

@@ -33,7 +33,7 @@ const VisionSection = () => {
     {
       title: "Chairperson's Vision",
       name: "Dr. Asif Aziz",
-      image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCMeDUhl2bcCQSTWuXnByIL6j2Z89Vtd4HgJ73",
+      image: "/candidates/hod.jpg",
       vision: "Welcome! I am excited to guide you on your journey in this essential field, with dedication to equipping you with the skills and knowledge to flourish in the ever-evolving world of cyber security. Our department is committed to fostering a learning environment that encourages innovation, critical thinking, and ethical practices. Whether you are just beginning your journey or advancing your expertise, we are here to support you every step of the way. \n Together, let's build a secure digital future.",
       position: "Chairperson, Department of Cybersecurity",
       icon: <ShieldCheck className="text-cyber-neon" size={24} />
@@ -41,7 +41,7 @@ const VisionSection = () => {
     {
       title: "Dean's Vision",
       name: "Prof. Dr. Engr. Atif Jamil",
-      image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCLJi2uLtXODiK1cHEUeuAwkTNzRp9vF47Por2",
+      image: "/candidates/dean.jpg",
       vision: "To cultivate leaders in cybersecurity through innovative education, research contributions, and community engagement that shapes the future security landscape. Our department is committed to fostering a learning environment that encourages innovation, critical thinking, and ethical practices. Whether you are just beginning your journey or advancing your expertise, we are here to support you every step of the way. \n Together, let's build a secure digital future.",
       position: "Dean, Faculty of Computing & Information Sciences",
       icon: <ShieldCheck className="text-cyber-neon" size={24} />

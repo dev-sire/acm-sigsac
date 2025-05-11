@@ -4,7 +4,7 @@ import { Github, Twitter, Linkedin, Facebook, Instagram, Mail } from 'lucide-rea
 
 const Footer = () => {
   return (
-    <footer className="bg-cyber-dark relative">
+    <div className="bg-cyber-dark relative">
       <div className="absolute inset-0 grid-pattern opacity-5"></div>
       
       <div className="container mx-auto px-4 py-16">
@@ -138,7 +138,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 
