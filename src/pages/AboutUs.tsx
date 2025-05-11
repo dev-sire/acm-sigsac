@@ -587,7 +587,9 @@ const AboutUs = () => {
                     
                     <div className="mt-4">
                       <Button variant="outline" className="border-cyber-neon/30 text-cyber-neon hover:bg-cyber-neon/10">
-                        Join Our Initiative
+                        <a target='_blank' href='https://www.linkedin.com/posts/acm-sigsac_digitaldefense-pakistancyberalert-cyberattack2025-activity-7327195675417329664-vAAZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEwB_U8Bp2kty5hvWdYZr6iF7eT8AS2eOgE'>
+                          Join Our Initiative
+                        </a>
                       </Button>
                     </div>
                   </div>

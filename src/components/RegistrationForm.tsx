@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { sendRegistrationEmail } from '@/utils/emailService';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -74,6 +75,13 @@ const RegistrationForm = ({ eventType }: RegistrationFormProps) => {
         .select();
 
       if (error) throw error;
+
+      await sendRegistrationEmail({
+        teamName: data.rollNo,
+        leaderName: data.name,
+        leaderEmail: data.email,
+        eventName: "Cyber Seminars",
+      });
       
       toast({
         title: "Registration Successful!",

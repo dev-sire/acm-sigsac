@@ -18,6 +18,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import FileUpload from './FileUpload';
 import { supabase } from "@/integrations/supabase/client";
+import { sendRegistrationEmail } from '@/utils/emailService';
 
 const formSchema = z.object({
   teamName: z.string().min(2, "Team name must be at least 2 characters."),
@@ -108,6 +109,13 @@ const DemogoronRegistrationForm = ({ eventType }: CompetitionRegistrationFormPro
         .select();
 
       if (error) throw error;
+
+      await sendRegistrationEmail({
+        teamName: data.teamName,
+        leaderName: data.leaderName,
+        leaderEmail: data.leaderEmail,
+        eventName: "Demogoron Debuggers",
+      });
       
       toast({
         title: "Registration Successful!",
