@@ -374,47 +374,54 @@ const AboutUs = () => {
 
   const executiveTeam = {
     name: "Executive Body",
-    description: "The leadership team that guides our chapter's vision and strategic direction.",
-    image: "https://randomuser.me/api/portraits/group/1.jpg",
-    members: "Alex Johnson, Sarah Williams, Michael Chen, Emily Rodriguez, David Lee, Lisa Kumar"
+    description: "The Central Planning and Leadership Group: Focuses on their role in planning and overall leadership.",
+    image: "/executive_body.svg",
+    members: "Aayesha, Rabia, Bushra, Ammara, Wasay, Usaiym, Sabat"
   };
 
   const teams: TeamType[] = [
     {
       name: "Social Media Team",
       description: "Responsible for managing our online presence and community engagement.",
-      image: "https://randomuser.me/api/portraits/group/2.jpg",
-      members: "Jason Wong, Alicia Freeman, Raj Patel",
+      image: "/social-media.svg",
+      members: "Hafsah, Shaheer, Taha Shakeel, Zoha, Hooria, Razzaque, Nouman",
       icon: <Network size={24} className="text-cyber-neon" />
     },
     {
-      name: "Web Development Team",
-      description: "Creates and maintains our digital platforms and web applications.",
-      image: "https://randomuser.me/api/portraits/group/3.jpg",
-      members: "Emma Zhang, Marcus Jefferson, Sophia Nguyen, Omar Hassan",
+      name: "Directors",
+      description: "The directorial team responsible for charting the future course and strategic priorities of our society.",
+      image: "/directors.svg",
+      members: "Nimra, Bilal, Ubaid, razi, Hamza",
       icon: <CircuitBoard size={24} className="text-cyber-neon" />
     },
     {
       name: "CTF Team",
       description: "Participates in cybersecurity competitions and develops training materials.",
-      image: "https://randomuser.me/api/portraits/group/4.jpg",
-      members: "Daniel Kim, Maya Rodriguez, Victor Cheng, Zara Malik",
+      image: "/ctf-team.svg",
+      members: "Aman, Wasay, Hafsah, Rabia, Ammara, Ayesha, Haris, Ubaid, Ateeb",
       icon: <Shield size={24} className="text-cyber-neon" />
+    },
+    {
+      name: "Ambassadors",
+      description: "The dedicated individuals who act as our society's representatives and champions, promoting our vision and values.",
+      image: "/placeholder-can2.png",
+      members: "Talha, Haider",
+      icon: <BrainCircuit size={24} className="text-cyber-neon" />
     },
     {
       name: "Event Management Team",
       description: "Plans and executes workshops, seminars, and networking events.",
-      image: "https://randomuser.me/api/portraits/group/5.jpg",
+      image: "/placeholder-can2.png",
       members: "Leila Patel, James Wilson, Aisha Johnson, Carlos Mendez",
       icon: <BrainCircuit size={24} className="text-cyber-neon" />
     },
     {
       name: "Photography Team",
       description: "Documents our events and creates visual content for our platforms.",
-      image: "https://randomuser.me/api/portraits/group/6.jpg",
+      image: "/placeholder-can2.png",
       members: "Nathan Lee, Priya Sharma, Leo Martinez",
       icon: <Database size={24} className="text-cyber-neon" />
-    }
+    },
   ];
 
   return (
@@ -538,7 +545,7 @@ const AboutUs = () => {
                     
                     <div className="bg-white/5 border border-cyber-neon/20 rounded-md p-3 mb-4 relative">
                       <div className="text-sm font-mono text-cyber-neon opacity-80 pb-1 overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-cyber-neon/20 scrollbar-track-transparent pr-10">
-                        #DUETSocialmediawarriorsagainstindianaggression
+                        #DUETSocialMediaWarriorsAgainstIndianAggression
                       </div>
                       <button 
                         onClick={copyHashtagToClipboard}
@@ -652,10 +659,10 @@ const AboutUs = () => {
                     <p className="text-white/70">{executiveTeam.members}</p>
                   </div>
                   <div className="flex -space-x-2 overflow-hidden">
-                    {executiveTeam.members.split(", ").slice(0, 5).map((member, index) => (
+                    {/* {executiveNames.map((name, index) => (
                       <Avatar key={index} className="border-2 border-cyber-dark relative group">
-                        <AvatarImage src={`https://randomuser.me/api/portraits/${index % 2 === 0 ? 'men' : 'women'}/${index + 1}.jpg`} />
-                        <AvatarFallback>{member.split(" ").map(n => n[0]).join("")}</AvatarFallback>
+                        <img src='/aayesha.jpg' />
+                        <AvatarFallback>{name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
                         <div className="absolute inset-0 rounded-full border border-cyber-neon/0 group-hover:border-cyber-neon/50 transition-all"></div>
                       </Avatar>
                     ))}
@@ -663,7 +670,7 @@ const AboutUs = () => {
                       <Avatar className="bg-cyber-neon text-cyber-dark border-2 border-cyber-dark">
                         <AvatarFallback>+{executiveTeam.members.split(", ").length - 5}</AvatarFallback>
                       </Avatar>
-                    )}
+                    )} */}
                   </div>
                 </div>
               </div>
@@ -704,7 +711,7 @@ const AboutUs = () => {
                     <img 
                       src={team.image} 
                       alt={team.name} 
-                      className="w-full h-48 object-cover rounded-lg border border-cyber-neon/30 mb-6 relative z-10" 
+                      className="w-full h-60 object-cover rounded-lg border border-cyber-neon/30 mb-6 relative z-10" 
                     />
                     
                     <div className="flex items-center gap-3 mb-2">
