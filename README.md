@@ -43,6 +43,18 @@ This website is built using a modern and powerful technology stack:
 ├─ package.json
 ├─ postcss.config.js
 ├─ public
+│  ├─ candidates
+│  │  ├─ aayesha.jpg
+│  │  ├─ ammara.jpg
+│  │  ├─ dean.jpg
+│  │  ├─ hafsa.jpg
+│  │  ├─ hod.jpg
+│  │  ├─ my-profile.jpg
+│  │  ├─ rabia.jpg
+│  │  ├─ sofia.jpg
+│  │  ├─ ubaid.jpg
+│  │  ├─ usaiym.jpg
+│  │  └─ wasay-2.jpg
 │  ├─ circuit-pattern.svg
 │  ├─ favicon.ico
 │  ├─ logo.png
@@ -54,9 +66,13 @@ This website is built using a modern and powerful technology stack:
 │  ├─ App.tsx
 │  ├─ components
 │  │  ├─ CollaboratorsSection.tsx
+│  │  ├─ CountdownTimer.tsx
+│  │  ├─ DemogoronRegistration.tsx
 │  │  ├─ EventsSection.tsx
+│  │  ├─ FileUpload.tsx
 │  │  ├─ Footer.tsx
 │  │  ├─ GallerySection.tsx
+│  │  ├─ HackemonRegistration.tsx
 │  │  ├─ HeroSection.tsx
 │  │  ├─ LoadingScreen.tsx
 │  │  ├─ Navbar.tsx
@@ -119,8 +135,11 @@ This website is built using a modern and powerful technology stack:
 │  │  ├─ use-mobile.tsx
 │  │  └─ use-toast.ts
 │  ├─ index.css
+│  ├─ integrations
+│  │  └─ supabase
+│  │     ├─ client.ts
+│  │     └─ types.ts
 │  ├─ lib
-│  │  ├─ supabase.ts
 │  │  └─ utils.ts
 │  ├─ main.tsx
 │  ├─ pages
@@ -131,16 +150,18 @@ This website is built using a modern and powerful technology stack:
 │  │  └─ Registration.tsx
 │  ├─ utils
 │  │  ├─ cursorTrail.ts
+│  │  ├─ emailService.ts
 │  │  └─ scrollReveal.ts
 │  └─ vite-env.d.ts
+├─ supabase
+│  └─ configure.toml
 ├─ tailwind.config.ts
 ├─ tsconfig.app.json
 ├─ tsconfig.json
 ├─ tsconfig.node.json
+├─ vercel.json
 └─ vite.config.ts
 ```
-
-### Prerequisites
 
 Before setting up the project, ensure you have the following installed:
 
