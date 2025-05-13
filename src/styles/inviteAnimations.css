@@ -1,0 +1,32 @@
+
+@keyframes binaryRain {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.binary-line {
+  position: absolute;
+  top: 0;
+  color: #33C3F0;
+  opacity: 0.2;
+  font-family: monospace;
+  font-size: 12px;
+  pointer-events: none;
+  animation: binaryRain linear forwards;
+}
+
+#binary-rain > div {
+  animation: binaryRain 15s linear forwards;
+}

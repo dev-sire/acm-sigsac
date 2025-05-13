@@ -74,6 +74,7 @@ const InvitePage = () => {
   
   return (
     <div className="min-h-screen bg-cyber-dark overflow-hidden">
+      
       {/* Binary rain background effect */}
       <div id="binary-rain" className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         {/* Binary stream elements will be added here by JS */}

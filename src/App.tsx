@@ -14,6 +14,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Gallery from "./pages/Gallery";
 import DynamicOGImage from "./components/DynamicOGImage";
 import InvitePage from "./pages/InvitePage";
+import "./styles/inviteAnimations.css";
 
 // Create a client
 const queryClient = new QueryClient({
