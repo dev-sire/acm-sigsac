@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
 import { Analytics } from "@vercel/analytics/react";
 import Gallery from "./pages/Gallery";
+import DynamicOGImage from "./components/DynamicOGImage";
+import InvitePage from "./pages/InvitePage";
 
 // Create a client
 const queryClient = new QueryClient({
@@ -52,7 +54,8 @@ const App = () => {
               <Route path="/registration/:eventType" element={<Registration />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/gallery" element={<Gallery />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="/og-image" element={<DynamicOGImage />} />
+              <Route path="/invite" element={<InvitePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
