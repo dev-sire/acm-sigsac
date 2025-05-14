@@ -6,17 +6,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 const gallery = [
   {
     id: 1,
-    title: "Cybersecurity Bootcamp 2024",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    date: "February 2024",
-    description: "An intensive hands-on bootcamp covering fundamental cybersecurity concepts and techniques."
+    title: "Student Week 2025",
+    image: "/student-week.jpeg",
+    date: "January 2025",
+    description: "Our Student Week brought games and collaboration with AICP and SFI for unforgettable fun."
   },
   {
     id: 2,
-    title: "Capture The Flag Competition",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    date: "December 2023",
-    description: "A friendly hacking competition where teams competed to solve cybersecurity challenges and puzzles."
+    title: "Beach Bash 2025",
+    image: "/beach-bash.jpeg",
+    date: "April 2025",
+    description: "Sun, sand, and society vibes: Our standalone Beach Bash delivered the perfect coastal escape."
   },
   {
     id: 3,
