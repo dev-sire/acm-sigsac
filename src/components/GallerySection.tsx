@@ -13,24 +13,24 @@ const gallery = [
   },
   {
     id: 2,
+    title: "A Day at FAST",
+    image: "/procom_fast.jpg",
+    date: "February 2025",
+    description: "A one day visit to FAST University for the participation in Procom'25"
+  },
+  {
+    id: 3,
     title: "Beach Bash 2025",
     image: "/beach-bash.jpeg",
     date: "April 2025",
     description: "Sun, sand, and society vibes: Our standalone Beach Bash delivered the perfect coastal escape."
   },
   {
-    id: 3,
-    title: "Industry Expert Panel Discussion",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    date: "November 2023",
-    description: "Leading cybersecurity professionals shared insights on emerging threats and career opportunities."
-  },
-  {
     id: 4,
-    title: "Networking Workshop",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    date: "October 2023",
-    description: "Hands-on workshop focused on network security fundamentals and practical defense strategies."
+    title: "Pakistan Solidarity Rally",
+    image: "/march.jpg",
+    date: "May 2025",
+    description: "Our Participation in the Inter-University Solidarity March for supporting nation's defence"
   },
   {
     id: 5,
@@ -38,13 +38,6 @@ const gallery = [
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     date: "September 2023",
     description: "Our flagship event featuring keynote speakers, workshops, and networking opportunities."
-  },
-  {
-    id: 6,
-    title: "Student Hackathon",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    date: "August 2023",
-    description: "A 24-hour coding marathon where students built innovative security tools and applications."
   },
 ];
 

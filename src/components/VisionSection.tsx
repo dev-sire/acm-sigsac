@@ -33,7 +33,7 @@ const VisionSection = () => {
     {
       title: "Chairperson's Vision",
       name: "Dr. Asif Aziz",
-      image: "/candidates/hod.jpg",
+      image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCMeDUhl2bcCQSTWuXnByIL6j2Z89Vtd4HgJ73",
       vision: "Welcome! I am excited to guide you on your journey in this essential field, with dedication to equipping you with the skills and knowledge to flourish in the ever-evolving world of cyber security. Our department is committed to fostering a learning environment that encourages innovation, critical thinking, and ethical practices. Whether you are just beginning your journey or advancing your expertise, we are here to support you every step of the way. \n Together, let's build a secure digital future.",
       position: "Chairperson, Department of Cybersecurity",
       icon: <ShieldCheck className="text-cyber-neon" size={24} />
@@ -41,8 +41,8 @@ const VisionSection = () => {
     {
       title: "Dean's Vision",
       name: "Prof. Dr. Engr. Atif Jamil",
-      image: "/candidates/dean.jpg",
-      vision: "To cultivate leaders in cybersecurity through innovative education, research contributions, and community engagement that shapes the future security landscape. Our department is committed to fostering a learning environment that encourages innovation, critical thinking, and ethical practices. Whether you are just beginning your journey or advancing your expertise, we are here to support you every step of the way. \n Together, let's build a secure digital future.",
+      image: "https://aug5orynmq.ufs.sh/f/2UpMAj3GExWCW7Fav1G2C3lA1F6IyePa7hBckO0Kg8toTLiS",
+      vision: "To cultivate a generation of impactful cybersecurity leaders equipped with the knowledge, skills, and ethical grounding to navigate and shape the evolving digital landscape. We are dedicated to fostering an environment of innovative education and groundbreaking research that directly addresses critical security challenges. Through strong community engagement, we strive to build a future where security is not just a feature, but a fundamental principle, and our graduates are at the forefront of making that vision a reality.",
       position: "Dean, Faculty of Computing & Information Sciences",
       icon: <ShieldCheck className="text-cyber-neon" size={24} />
     }
