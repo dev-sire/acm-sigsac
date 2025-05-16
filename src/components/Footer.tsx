@@ -33,7 +33,7 @@ const Footer = () => {
               <a href="#" className="text-white/70 hover:text-cyber-neon transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="text-white/70 hover:text-cyber-neon transition-colors">
+              <a href="https://www.linkedin.com/company/acm-sigsac/" className="text-white/70 hover:text-cyber-neon transition-colors">
                 <Linkedin size={18} />
               </a>
               <a href="#" className="text-white/70 hover:text-cyber-neon transition-colors">
@@ -110,7 +110,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <Mail size={18} className="text-cyber-neon mr-3 mt-1 flex-shrink-0" />
                 <a href="mailto:contact@acmsigsac.edu" className="text-white/70 hover:text-cyber-neon transition-colors">
-                  contact@acmsigsac.edu
+                  sigsac.acm.duet@gmail.com
                 </a>
               </li>
               <li>

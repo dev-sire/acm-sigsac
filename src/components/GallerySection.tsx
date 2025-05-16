@@ -34,10 +34,10 @@ const gallery = [
   },
   {
     id: 5,
-    title: "Annual Cyber Conference",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    date: "September 2023",
-    description: "Our flagship event featuring keynote speakers, workshops, and networking opportunities."
+    title: "Welcome Party",
+    image: "/welcome.jpg",
+    date: "December 2023",
+    description: "Hosted Welcome Party for the 24 Batch of Cyber Department in Collaboration with CSS ACM DUET"
   },
 ];
 
