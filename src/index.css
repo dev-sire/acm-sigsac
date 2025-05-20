@@ -1,48 +1,47 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 220 10% 15%;
+    --foreground: 210 20% 80%;
 
-    --card: 224 47% 9%;
-    --card-foreground: 210 40% 98%;
+    --card: 224 10% 12%;
+    --card-foreground: 210 20% 80%;
 
-    --popover: 224 47% 9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 224 10% 12%;
+    --popover-foreground: 210 20% 80%;
 
-    --primary: 196 62% 80%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 196 10% 65%;
+    --primary-foreground: 222 20% 18%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 217 10% 25%;
+    --secondary-foreground: 210 20% 80%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 15% 25%;
+    --muted-foreground: 215 10% 65%;
 
-    --accent: 260 67% 75%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 260 10% 55%;
+    --accent-foreground: 210 20% 80%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 20% 40%;
+    --destructive-foreground: 210 20% 80%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --border: 217 15% 25%;
+    --input: 217 15% 25%;
+    --ring: 224 10% 40%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 224 47% 9%;
-    --sidebar-foreground: 196 62% 80%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 260 67% 75%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217.2 32.6% 17.5%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 224 10% 12%;
+    --sidebar-foreground: 196 10% 65%;
+    --sidebar-primary: 224 10% 40%;
+    --sidebar-primary-foreground: 0 0% 90%;
+    --sidebar-accent: 260 10% 55%;
+    --sidebar-accent-foreground: 210 20% 80%;
+    --sidebar-border: 217 15% 25%;
+    --sidebar-ring: 217 15% 50%;
   }
 }
 
@@ -54,41 +53,54 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
-    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSI4IiBzdHJva2U9IiMzM0MzRjAiIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjMiIGZpbGw9IiMzM0MzRjAiLz48L3N2Zz4="), auto;
+    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSI4IiBzdHJva2U9IiM4RTkxOTYiIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjMiIGZpbGw9IiM4RTkxOTYiLz48L3N2Zz4="), auto;
+    filter: grayscale(60%);
   }
   
   a, button {
-    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSI4IiBmaWxsPSIjMzNDM0YwIiBmaWxsLW9wYWNpdHk9IjAuNSIvPjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjQiIGZpbGw9IiMzM0MzRjAiLz48L3N2Zz4="), pointer;
+    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSI4IiBmaWxsPSIjOEU5MTk2IiBmaWxsLW9wYWNpdHk9IjAuNSIvPjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjQiIGZpbGw9IiM4RTkxOTYiLz48L3N2Zz4="), pointer;
+  }
+
+  /* Add expired overlay */
+  #root::before {
+    content: "PENNYWISE";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 15vw;
+    font-weight: 900;
+    color: rgba(100, 100, 100, 0.15);
+    z-index: 1000;
+    pointer-events: none;
+    letter-spacing: 0.5vw;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 }
 
-::selection{
-  color: #1A1F2C;
-  background-color: rgb(51 195 240);
-}
-
-/* Custom scrollbar */
+/* Custom scrollbar - greyed out */
 ::-webkit-scrollbar {
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(26, 31, 44, 0.8);
+  background: rgba(50, 50, 50, 0.8);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #33C3F0 0%, #1A1F2C 180%);
+  background: linear-gradient(180deg, #8E9196 0%, #1A1F2C 180%);
   border-radius: 5px;
-  border: 2px solid rgba(26, 31, 44, 0.5);
+  border: 2px solid rgba(50, 50, 50, 0.5);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #33C3F0 0%, #1A1F2C 120%);
+  background: linear-gradient(180deg, #8E9196 0%, #1A1F2C 120%);
 }
 
 /* Firefox */
 html {
-  scrollbar-color: #33C3F0 rgba(26, 31, 44, 0.8);
+  scrollbar-color: #8E9196 rgba(50, 50, 50, 0.8);
   scrollbar-width: thin;
 }
 
@@ -379,4 +391,252 @@ html {
   0% { box-shadow: 0 0 0 0 rgba(51, 195, 240, 0.4); }
   70% { box-shadow: 0 0 0 10px rgba(51, 195, 240, 0); }
   100% { box-shadow: 0 0 0 0 rgba(51, 195, 240, 0); }
+}
+
+/* New About Us Page Cyber Animations */
+@keyframes cyber-scan {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.cyber-scan {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: rgba(51, 195, 240, 0.5);
+  animation: cyber-scan 8s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+  box-shadow: 0 0 10px 2px rgba(51, 195, 240, 0.4);
+}
+
+@keyframes cyber-matrix {
+  0% { 
+    content: attr(data-value);
+    color: rgba(51, 195, 240, 0.8); 
+  }
+  20% { 
+    content: attr(data-scrambled);
+    color: rgba(51, 195, 240, 0.6); 
+  }
+  40% { 
+    content: attr(data-value);
+    color: rgba(51, 195, 240, 0.8); 
+  }
+  100% { 
+    content: attr(data-value);
+    color: rgba(51, 195, 240, 0.8); 
+  }
+}
+
+.cyber-text {
+  position: relative;
+  font-family: monospace;
+}
+
+.cyber-text::after {
+  content: attr(data-value);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(51, 195, 240, 0.8);
+  animation: cyber-matrix 10s infinite;
+  animation-delay: calc(var(--index) * 0.5s);
+  pointer-events: none;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(51, 195, 240, 0.4)); }
+  50% { filter: drop-shadow(0 0 8px rgba(51, 195, 240, 0.8)); }
+}
+
+.icon-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Data grid background */
+.data-grid {
+  background-image:
+    linear-gradient(rgba(51, 195, 240, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(51, 195, 240, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Binary rain effect */
+@keyframes binary-rain {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 0.3; }
+  90% { opacity: 0.3; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.binary-rain {
+  position: fixed;
+  color: rgba(51, 195, 240, 0.3);
+  pointer-events: none;
+  user-select: none;
+  font-family: monospace;
+  font-size: 12px;
+  animation: binary-rain var(--speed) linear infinite;
+  animation-delay: var(--delay);
+}
+
+/* Circuit path animation for About Us - greyed out */
+@keyframes circuit-path-animation {
+  0% { width: 0; opacity: 0.5; }
+  100% { width: 100%; opacity: 0.5; }
+}
+
+.circuit-path-animated {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(142, 145, 150, 0.5), transparent);
+  width: 0;
+  animation: circuit-path-animation 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/* Vision section specific animations - greyed out */
+.vision-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(142, 145, 150, 0.05), transparent);
+  transform: rotate(45deg);
+  animation: vision-card-shine 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes vision-card-shine {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Team member hover effect */
+.team-member {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -10px rgba(51, 195, 240, 0.4);
+}
+
+.team-member::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(51, 195, 240, 0.6), transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.team-member:hover::after {
+  transform: scaleX(1);
+}
+
+/* Glowing dots in vision section */
+.glowing-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(51, 195, 240, 0.7);
+  filter: blur(1px);
+  animation: dot-pulse 2s infinite;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.5); opacity: 1; }
+}
+
+/* Quote styling */
+.quote-marks {
+  position: relative;
+  font-style: italic;
+  padding: 0 1.5rem;
+}
+
+.quote-marks::before,
+.quote-marks::after {
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: rgba(51, 195, 240, 0.7);
+  position: absolute;
+}
+
+.quote-marks::before {
+  content: '\201C';
+  left: 0;
+  top: -0.5rem;
+}
+
+.quote-marks::after {
+  content: '\201D';
+  right: 0;
+  bottom: -0.5rem;
+}
+
+/* Copy button styles */
+.hashtag-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.copy-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(51, 195, 240, 0.15);
+  border-radius: 4px;
+  padding: 0.3rem;
+  transition: all 0.2s;
+}
+
+.copy-button:hover {
+  background: rgba(51, 195, 240, 0.3);
+}
+
+.copy-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .media-advocacy-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quote-marks::before {
+    left: 0;
+    top: -0.25rem;
+    font-size: 1.5rem;
+  }
+  
+  .quote-marks::after {
+    right: 0;
+    bottom: -0.25rem;
+    font-size: 1.5rem;
+  }
+  
+  .hashtag-container {
+    max-width: 100%;
+  }
 }
