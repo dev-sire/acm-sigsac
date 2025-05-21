@@ -179,19 +179,19 @@ const HackemonRegistrationForm = () => {
           >
             <h3 className="text-cyber-neon font-semibold text-lg mb-2">Registration Fee: 1500 PKR per team</h3>
             <p className="text-white/70 text-sm mb-4">
-              Please make the payment to any of the following accounts before submitting your registration.
+              Please make the payment to the following accounts before submitting your registration.
             </p>
             <div className="space-y-2 text-sm text-white/90">
               <div className="flex flex-col">
                 <span className="font-semibold">EasyPaisa:</span>
-                <span>0308-2275640 (Account Holder: AMAAN SHAHID)</span>
+                <span>03212053324 (Account Holder: ABDUL WASI KHAN )</span>
               </div>
-              <div className="flex flex-col">
+              {/* <div className="flex flex-col">
                 <span className="font-semibold">Bank Account:</span>
                 <span>Account #: 3714 496353 98431</span>
                 <span>Card Name: American Express</span>
                 <span>Company: Corning Incorporated Asia</span>
-              </div>
+              </div> */}
             </div>
           </motion.div>
           
