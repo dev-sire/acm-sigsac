@@ -451,7 +451,7 @@ const HeroSection = () => {
           </div>
           
           <h1 className="text-heading-xl mb-6 glitch animate-scale-in" data-text="ACM SIGSAC">
-            AIK THI <span className="text-cyber-neon neon-text"> SIGSAC</span>
+            ACM <span className="text-cyber-neon neon-text">SIGSAC</span>
           </h1>
           
           <p className="text-xl mb-8 text-white/80 animate-fade-in" style={{ animationDelay: "0.3s" }}>

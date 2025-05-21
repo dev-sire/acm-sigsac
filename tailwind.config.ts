@@ -26,12 +26,12 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				cyber: {
-					primary: '#8E9196',    // Greyed out from bright blue
-					secondary: '#6A6A70',  // Greyed out purple
-					accent: '#7A7A82',     // Greyed out purple
-					dark: '#1A1F2C',       // Kept dark background
-					light: '#B8B8C0',      // Greyed out light purple
-					neon: '#8E9196',       // Greyed out from neon blue
+					primary: '#1EAEDB',    // Bright blue
+					secondary: '#7E69AB',  // Secondary purple
+					accent: '#9b87f5',     // Primary purple
+					dark: '#1A1F2C',       // Dark purple background
+					light: '#D6BCFA',      // Light purple
+					neon: '#33C3F0',       // Neon blue for highlights
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
