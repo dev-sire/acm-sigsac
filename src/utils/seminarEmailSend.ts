@@ -11,7 +11,6 @@ interface EmailParams {
   teamName: string;
   leaderName: string;
   leaderEmail: string;
-  eventName: string;
   message?: string;
 }
 
@@ -24,7 +23,6 @@ export const sendSeminarEmail = async (params: EmailParams): Promise<boolean> =>
         leaderName: params.leaderName,
         leaderEmail: params.leaderEmail,
         teamName: params.teamName,
-        event_name: params.eventName,
       }
     );
     

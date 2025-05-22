@@ -81,7 +81,6 @@ const RegistrationForm = ({ eventType }: RegistrationFormProps) => {
         teamName: data.rollNo,
         leaderName: data.name,
         leaderEmail: data.email,
-        eventName: "Cyber Seminars",
       });
       
       toast({
