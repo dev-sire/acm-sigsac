@@ -35,7 +35,7 @@ const Registration = () => {
       setFormType('competition');
     } else {
       setEventTitle('Psyber Arena Seminars');
-      setEventDescription('Register for our 2 Days Cyber Security Seminars');
+      setEventDescription('Register for our 2 Days Cyber Security Seminars and hands on workshops');
       setFormType('general');
     }
     

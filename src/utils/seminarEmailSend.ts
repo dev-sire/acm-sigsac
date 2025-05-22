@@ -21,11 +21,10 @@ export const sendSeminarEmail = async (params: EmailParams): Promise<boolean> =>
       SERVICE_ID,
       TEMPLATE_ID,
       {
-        to_email: params.leaderEmail,
-        to_name: params.leaderName,
-        team_name: params.teamName,
+        leaderName: params.leaderName,
+        leaderEmail: params.leaderEmail,
+        teamName: params.teamName,
         event_name: params.eventName,
-        message: params.message || ''
       }
     );
     

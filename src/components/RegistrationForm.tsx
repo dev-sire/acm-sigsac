@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { sendSeminarEmail } from '@/utils/seminarEmailSend';
+import { motion } from 'framer-motion';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -106,6 +107,33 @@ const RegistrationForm = ({ eventType }: RegistrationFormProps) => {
     <div className="scroll-fx bg-cyber-dark/60 border border-white/10 p-6 md:p-8 rounded-lg shadow-lg">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <motion.div 
+            className="bg-cyber-dark/80 border border-cyber-neon/30 p-4 rounded-md mb-6"
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h3 className="text-cyber-neon font-semibold text-lg mb-2">2 Days hands on workshops on Offensive and Defensive Security</h3>
+            {/* <p className="text-white/70 text-sm mb-4">
+              Please make the payment to the following accounts before submitting your registration.
+            </p> */}
+            <div className="space-y-2 text-sm text-white/90">
+              <div className="flex flex-col">
+                <span className="font-semibold">Monday, 26 May, 2025</span>
+                <span>Blue Team: The guardians of the digital frontier.</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-semibold">Tuesday, 27 May, 2025</span>
+                <span>Red Team: Because complacency is not an option.</span>
+              </div>
+              {/* <div className="flex flex-col">
+                <span className="font-semibold">Bank Account:</span>
+                <span>Account #: 3714 496353 98431</span>
+                <span>Card Name: American Express</span>
+                <span>Company: Corning Incorporated Asia</span>
+              </div> */}
+            </div>
+          </motion.div>
           <div className="grid md:grid-cols-2 gap-6">
             <FormField
               control={form.control}

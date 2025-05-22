@@ -17,7 +17,7 @@ const events = [
     category: "Competition",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     slug: "hackemon-ctf",
-    registrationEnds: "2025-06-03T09:00:00",
+    registrationEnds: "2025-05-28T09:00:00",
     isCompetition: true
   },
   {
@@ -29,19 +29,19 @@ const events = [
     category: "Competition",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     slug: "demogoron-debuggers",
-    registrationEnds: "2025-06-03T08:00:00", // One day before the event
+    registrationEnds: "2025-05-28T08:00:00", // One day before the event
     isCompetition: true
   },
   {
     id: 3,
     title: "Cyber Security Seminars",
-    date: "May 20, 2025",
+    date: "May 27, 2025 & May 27, 2025",
     time: "1:00 PM - 2:00 PM",
     location: "Main Campus Seminar Hall",
     category: "Panel",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     slug: "seminars",
-    registrationEnds: "2025-06-03T15:00:00", // Two days before the event
+    registrationEnds: "2025-05-27T15:00:00", // Two days before the event
     isCompetition: false
   },
 ];

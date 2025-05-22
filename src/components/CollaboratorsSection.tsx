@@ -5,7 +5,7 @@ const collaborators = [
   {
     id: 1,
     name: "IEEE Education Society (Karachi Section)",
-    logo: "/ieee.jpeg",
+    logo: "/1.svg",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const collaborators = [
   {
     id: 4,
     name: "ACM BAHRIA",
-    logo: "/acm-bahria.jpeg",
+    logo: "/2.svg",
   },
   {
     id: 5,
