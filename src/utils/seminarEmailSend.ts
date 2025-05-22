@@ -1,9 +1,9 @@
 
 import emailjs from 'emailjs-com';
 
-const USER_ID = 'ULorU9QL7POID2RYz';
-const SERVICE_ID = 'service_gcbkm66';
-const TEMPLATE_ID = 'template_x72dz1m';
+const USER_ID = 'A773VG8D7UxbuM1-G';
+const SERVICE_ID = 'service_7blsqqd';
+const TEMPLATE_ID = 'template_wibl0yg';
 
 emailjs.init(USER_ID);
 
@@ -15,7 +15,7 @@ interface EmailParams {
   message?: string;
 }
 
-export const sendRegistrationEmail = async (params: EmailParams): Promise<boolean> => {
+export const sendSeminarEmail = async (params: EmailParams): Promise<boolean> => {
   try {
     const response = await emailjs.send(
       SERVICE_ID,

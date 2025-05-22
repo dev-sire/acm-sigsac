@@ -4,33 +4,33 @@ import React, { useEffect } from 'react';
 const collaborators = [
   {
     id: 1,
-    name: "Tech University",
-    logo: "https://via.placeholder.com/150x80?text=Tech+University",
+    name: "IEEE Education Society (Karachi Section)",
+    logo: "/ieee.jpeg",
   },
   {
     id: 2,
-    name: "CyberShield Inc.",
-    logo: "https://via.placeholder.com/150x80?text=CyberShield",
+    name: "SFI",
+    logo: "/sfi.jpeg",
   },
   {
     id: 3,
-    name: "SecureNet",
-    logo: "https://via.placeholder.com/150x80?text=SecureNet",
+    name: "ACM Cyber",
+    logo: "acm-cys.jpeg",
   },
   {
     id: 4,
-    name: "DataGuard",
-    logo: "https://via.placeholder.com/150x80?text=DataGuard",
+    name: "ACM BAHRIA",
+    logo: "/acm-bahria.jpeg",
   },
   {
     id: 5,
-    name: "Digital Fortress",
-    logo: "https://via.placeholder.com/150x80?text=Digital+Fortress",
+    name: "AICP",
+    logo: "/aicp.jpeg",
   },
   {
     id: 6,
-    name: "ByteSecure",
-    logo: "https://via.placeholder.com/150x80?text=ByteSecure",
+    name: "ACM-CSS-DUET",
+    logo: "/acm-css.jpeg",
   },
 ];
 
@@ -77,11 +77,11 @@ const CollaboratorsSection = () => {
               className="flex items-center justify-center scroll-fx"
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-white/5 border border-white/10 p-6 rounded-lg hover:border-cyber-neon/50 transition-all duration-300 w-full h-32 flex items-center justify-center group">
+              <div className="bg-white/5 border border-white/10 p-3 rounded-lg hover:border-cyber-neon/50 transition-all duration-300 w-full h-40 flex items-center justify-center group">
                 <img 
                   src={collaborator.logo} 
                   alt={collaborator.name} 
-                  className="max-h-16 max-w-full opacity-70 group-hover:opacity-100 transition-opacity"
+                  className="h-full w-full opacity-70 group-hover:opacity-100 transition-opacity"
                 />
               </div>
             </div>

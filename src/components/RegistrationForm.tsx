@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { sendRegistrationEmail } from '@/utils/emailService';
+import { sendSeminarEmail } from '@/utils/seminarEmailSend';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -76,7 +76,7 @@ const RegistrationForm = ({ eventType }: RegistrationFormProps) => {
 
       if (error) throw error;
 
-      await sendRegistrationEmail({
+      await sendSeminarEmail({
         teamName: data.rollNo,
         leaderName: data.name,
         leaderEmail: data.email,
