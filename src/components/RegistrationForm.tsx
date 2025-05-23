@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { sendSeminarEmail } from '@/utils/seminarEmailSend';
+import { sendSeminarEmail } from '@/utils/emailService';
 import { motion } from 'framer-motion';
 
 const formSchema = z.object({
@@ -112,18 +112,18 @@ const RegistrationForm = ({ eventType }: RegistrationFormProps) => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-cyber-neon font-semibold text-lg mb-2">2 Days hands on workshops on Offensive and Defensive Security</h3>
+            <h3 className="text-cyber-neon font-semibold text-lg mb-2">Psyber Arena Presents Hacknowledge Seminars</h3>
             {/* <p className="text-white/70 text-sm mb-4">
               Please make the payment to the following accounts before submitting your registration.
             </p> */}
             <div className="space-y-2 text-sm text-white/90">
               <div className="flex flex-col">
                 <span className="font-semibold">Monday, 26 May, 2025</span>
-                <span>Blue Team: The guardians of the digital frontier.</span>
+                <span>Hacknowledge Red Teaming: Because complacency is not an option.</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-semibold">Tuesday, 27 May, 2025</span>
-                <span>Red Team: Because complacency is not an option.</span>
+                <span>Hacknowledge Blue Teaming: The guardians of the digital frontier.</span>
               </div>
               {/* <div className="flex flex-col">
                 <span className="font-semibold">Bank Account:</span>
