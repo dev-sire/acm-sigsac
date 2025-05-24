@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 const USER_ID = 'ULorU9QL7POID2RYz';
 const SERVICE_ID = 'service_gcbkm66';
 const TEMPLATE_ID = 'template_x72dz1m';
+const SEMINAR_TEMPLATE_ID = 'template_aooitv7';
 
 emailjs.init(USER_ID);
 
@@ -12,6 +13,13 @@ interface EmailParams {
   leaderName: string;
   leaderEmail: string;
   eventName: string;
+  message?: string;
+}
+
+interface SeminarEmailParams {
+  teamName: string;
+  leaderName: string;
+  leaderEmail: string;
   message?: string;
 }
 
@@ -26,6 +34,26 @@ export const sendRegistrationEmail = async (params: EmailParams): Promise<boolea
         team_name: params.teamName,
         event_name: params.eventName,
         message: params.message || ''
+      }
+    );
+    
+    console.log('Email sent successfully:', response);
+    return true;
+  } catch (error) {
+    console.error('Error sending email:', error);
+    return false;
+  }
+};
+
+export const sendSeminarEmail = async (params: SeminarEmailParams): Promise<boolean> => {
+  try {
+    const response = await emailjs.send(
+      SERVICE_ID,
+      SEMINAR_TEMPLATE_ID,
+      {
+        leaderName: params.leaderName,
+        teamName: params.teamName,
+        leaderEmail: params.leaderEmail,
       }
     );
     
