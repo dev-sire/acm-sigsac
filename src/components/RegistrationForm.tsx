@@ -112,18 +112,20 @@ const RegistrationForm = ({ eventType }: RegistrationFormProps) => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-cyber-neon font-semibold text-lg mb-2">2 Days hands on workshops on Offensive and Defensive Security</h3>
-            {/* <p className="text-white/70 text-sm mb-4">
-              Please make the payment to the following accounts before submitting your registration.
-            </p> */}
+            <h3 className="text-cyber-neon font-semibold text-lg mb-2">2 Days Hacknowledege Seminars</h3>
+            <p className="text-white/70 text-sm mb-4">
+              Please Note: This single registration covers your attendance for both seminars.
+            </p>
             <div className="space-y-2 text-sm text-white/90">
               <div className="flex flex-col">
                 <span className="font-semibold">Monday, 26 May, 2025</span>
-                <span>Blue Team: The guardians of the digital frontier.</span>
+                <span>Red Team: When Vulnerability is not a Vulnerability</span>
+                <span className='text-cyber-neon'>Speaker: Sir Hafiz Muhammad Attaullah</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-semibold">Tuesday, 27 May, 2025</span>
-                <span>Red Team: Because complacency is not an option.</span>
+                <span>Blue Team: Trust No One, Secure Everything</span>
+                <span className='text-cyber-neon'>Speaker: Sir Ammar</span>
               </div>
               {/* <div className="flex flex-col">
                 <span className="font-semibold">Bank Account:</span>
