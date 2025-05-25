@@ -43,7 +43,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ endDate, className = ''
     return (
       <div className={`text-white ${className} flex justify-center`}>
         <span className="text-red-500 font-bold bg-red-500/10 px-3 py-1 rounded-md border border-red-500/30 animate-pulse">
-          Registration closed
+          Registrations Full! 
         </span>
       </div>
     );

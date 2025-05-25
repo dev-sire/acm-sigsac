@@ -41,7 +41,7 @@ const events = [
     category: "Panel",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     slug: "seminars",
-    registrationEnds: "2025-05-27T15:00:00", // Two days before the event
+    registrationEnds: "2025-05-25T15:00:00", // Two days before the event
     isCompetition: false
   },
 ];
