@@ -43,6 +43,13 @@ This website is built using a modern and powerful technology stack:
 ├─ package.json
 ├─ postcss.config.js
 ├─ public
+│  ├─ 1.svg
+│  ├─ 2.svg
+│  ├─ acm-css.jpeg
+│  ├─ acm-cys.jpeg
+│  ├─ aicp.jpeg
+│  ├─ ais.png
+│  ├─ beach-bash.jpeg
 │  ├─ candidates
 │  │  ├─ aayesha.jpg
 │  │  ├─ ammara.jpg
@@ -56,11 +63,21 @@ This website is built using a modern and powerful technology stack:
 │  │  ├─ usaiym.jpg
 │  │  └─ wasay-2.jpg
 │  ├─ circuit-pattern.svg
+│  ├─ ctf-team.svg
+│  ├─ directors.svg
+│  ├─ executive_body.svg
 │  ├─ favicon.ico
 │  ├─ logo.png
+│  ├─ march.jpg
+│  ├─ msp.jpg
 │  ├─ open-graph.png
+│  ├─ placeholder-can2.png
 │  ├─ placeholder.svg
-│  └─ robots.txt
+│  ├─ procom_fast.jpg
+│  ├─ robots.txt
+│  ├─ social-media.svg
+│  ├─ student-week.jpeg
+│  └─ welcome.jpg
 ├─ src
 │  ├─ App.css
 │  ├─ App.tsx
@@ -68,12 +85,14 @@ This website is built using a modern and powerful technology stack:
 │  │  ├─ CollaboratorsSection.tsx
 │  │  ├─ CountdownTimer.tsx
 │  │  ├─ DemogoronRegistration.tsx
+│  │  ├─ DynamicOGImage.tsx
 │  │  ├─ EventsSection.tsx
 │  │  ├─ FileUpload.tsx
 │  │  ├─ Footer.tsx
 │  │  ├─ GallerySection.tsx
 │  │  ├─ HackemonRegistration.tsx
 │  │  ├─ HeroSection.tsx
+│  │  ├─ InviteLinkGenerator.tsx
 │  │  ├─ LoadingScreen.tsx
 │  │  ├─ Navbar.tsx
 │  │  ├─ RegistrationForm.tsx
@@ -146,11 +165,15 @@ This website is built using a modern and powerful technology stack:
 │  │  ├─ AboutUs.tsx
 │  │  ├─ Gallery.tsx
 │  │  ├─ Index.tsx
+│  │  ├─ InvitePage.tsx
 │  │  ├─ NotFound.tsx
 │  │  └─ Registration.tsx
+│  ├─ styles
+│  │  └─ inviteAnimations.css
 │  ├─ utils
 │  │  ├─ cursorTrail.ts
 │  │  ├─ emailService.ts
+│  │  ├─ inviteUtils.ts
 │  │  └─ scrollReveal.ts
 │  └─ vite-env.d.ts
 ├─ supabase

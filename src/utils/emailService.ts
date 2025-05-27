@@ -1,10 +1,10 @@
 
 import emailjs from 'emailjs-com';
 
-const USER_ID = 'ULorU9QL7POID2RYz';
-const SERVICE_ID = 'service_gcbkm66';
-const TEMPLATE_ID = 'template_x72dz1m';
-const SEMINAR_TEMPLATE_ID = 'template_aooitv7';
+const USER_ID = 'A773VG8D7UxbuM1-G';
+const SERVICE_ID = 'service_7blsqqd';
+const TEMPLATE_ID = 'template_wibl0yg';
+// const SEMINAR_TEMPLATE_ID = 'template_aooitv7';
 
 emailjs.init(USER_ID);
 
@@ -47,17 +47,17 @@ export const sendRegistrationEmail = async (params: EmailParams): Promise<boolea
 
 export const sendSeminarEmail = async (params: SeminarEmailParams): Promise<boolean> => {
   try {
-    const response = await emailjs.send(
-      SERVICE_ID,
-      SEMINAR_TEMPLATE_ID,
-      {
-        leaderName: params.leaderName,
-        teamName: params.teamName,
-        leaderEmail: params.leaderEmail,
-      }
-    );
+    // const response = await emailjs.send(
+    //   SERVICE_ID,
+    //   SEMINAR_TEMPLATE_ID,
+    //   {
+    //     leaderName: params.leaderName,
+    //     teamName: params.teamName,
+    //     leaderEmail: params.leaderEmail,
+    //   }
+    // );
     
-    console.log('Email sent successfully:', response);
+    console.log('Registrations Closed!');
     return true;
   } catch (error) {
     console.error('Error sending email:', error);
