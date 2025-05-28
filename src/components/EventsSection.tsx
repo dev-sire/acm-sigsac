@@ -17,7 +17,7 @@ const events = [
     category: "Competition",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     slug: "hackemon-ctf",
-    registrationEnds: "2025-05-28T09:00:00",
+    registrationEnds: "2025-05-29T12:00:00",
     isCompetition: true
   },
   {
