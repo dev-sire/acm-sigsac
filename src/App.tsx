@@ -15,6 +15,7 @@ import Gallery from "./pages/Gallery";
 import DynamicOGImage from "./components/DynamicOGImage";
 import InvitePage from "./pages/InvitePage";
 import "./styles/inviteAnimations.css";
+import GreetPage from "./pages/GreetPage";
 
 // Create a client
 const queryClient = new QueryClient({
@@ -57,6 +58,7 @@ const App = () => {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/og-image" element={<DynamicOGImage />} />
               <Route path="/invite" element={<InvitePage />} />
+              <Route path="/greet" element={<GreetPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

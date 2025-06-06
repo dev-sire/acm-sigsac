@@ -68,12 +68,21 @@ const Gallery = () => {
           </div>
           
           {/* Gallery grid with animations */}
-          <div 
+          <motion.div 
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            layout
           >
             {filteredGallery.map((item, index) => (
-              <div 
+              <motion.div 
                 key={item.id}
+                layoutId={`gallery-item-${item.id}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  layout: { duration: 0.3 }
+                }}
                 onClick={() => setSelectedImage(item.id)}
                 className="cursor-pointer rounded-lg overflow-hidden bg-cyber-dark/50 border border-white/10 hover:border-cyber-neon/50 transition-all"
               >
@@ -103,14 +112,15 @@ const Gallery = () => {
                     View Details
                   </motion.button>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
           
           {/* Modal for selected image */}
           {selectedImage !== null && (
             <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
-              <div 
+              <motion.div 
+                layoutId={`gallery-item-${selectedImage}`}
                 className="relative max-w-4xl w-full bg-cyber-dark/90 rounded-lg border border-cyber-neon/30 overflow-hidden"
                 onClick={e => e.stopPropagation()}
               >
@@ -144,7 +154,7 @@ const Gallery = () => {
                     </div>
                   </>
                 )}
-              </div>
+              </motion.div>
             </div>
           )}
           
