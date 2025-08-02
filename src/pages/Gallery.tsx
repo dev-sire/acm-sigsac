@@ -7,6 +7,8 @@ import ScrollToTop from '@/components/ScrollToTop';
 import { setupScrollReveal } from '@/utils/scrollReveal';
 import createCursorTrail from '@/utils/cursorTrail';
 import { motion } from 'framer-motion';
+import FeaturedEventsSection from '@/components/FeaturedEventsSection';
+import { Separator } from '@/components/ui/separator';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<null | number>(null);
@@ -49,7 +51,28 @@ const Gallery = () => {
               A showcase of our past events and activities that have brought our cybersecurity community together.
             </p>
           </div>
+
+          <div className="container mx-auto px-4 py-12">
+            <div className="relative">
+              <Separator className="bg-cyber-neon/20" />
+              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cyber-dark px-6">
+                <div className="w-3 h-3 bg-cyber-neon rounded-full animate-pulse"></div>
+              </div>
+            </div>
+          </div>
           
+          <FeaturedEventsSection />
+
+          {/* Enhanced Separator between sections */}
+          <div className="container mx-auto px-4 py-12">
+            <div className="relative">
+              <Separator className="bg-cyber-neon/20" />
+              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cyber-dark px-6">
+                <div className="w-3 h-3 bg-cyber-neon rounded-full animate-pulse"></div>
+              </div>
+            </div>
+          </div>
+
           {/* Filter categories */}
           <div className="flex flex-wrap gap-2 justify-center mb-8 scroll-fx">
             {categories.map((category) => (

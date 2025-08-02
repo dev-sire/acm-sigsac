@@ -493,111 +493,113 @@ const AboutUs = () => {
           {/* Media Advocacy Section - NEW */}
           <div id="advocacy" className="mb-24 scroll-fx" ref={advocacyRef}>
             <div className="text-center mb-8">
-              <h2 className="text-heading-sm mb-2 relative inline-block">
-                <span className="text-cyber-neon">Media</span> Advocacy
+              <h2 className="text-heading-sm mb-2 text-xl font-bold relative inline-block">
+                <span className="text-cyber-neon">Tech Tayari</span> 1.0
                 <div className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyber-neon to-transparent"></div>
               </h2>
               <div className="max-w-3xl mx-auto px-4 relative">
-                <div className="text-2xl text-cyber-neon/80 absolute -left-2 top-0 md:-left-6">❝</div>
+                <div className="text-2xl text-cyber-neon/80 absolute -left-2 top-0 md:-left-6">🏆</div>
                 <p className="italic text-white/80 px-6">
-                  In the digital age, truth is our most powerful weapon against propaganda. We stand united against misinformation that threatens peace.
+                  ACM SIGSAC DUET is proud to be an official collaborator in Tech Tayari 1.0, a groundbreaking initiative that bridges the gap between academic learning and industry demands.
                 </p>
-                <div className="text-2xl text-cyber-neon/80 absolute -right-2 bottom-0 md:-right-6">❞</div>
+                <div className="text-2xl text-cyber-neon/80 absolute -right-2 top-0 md:-right-6">🏆</div>
               </div>
             </div>
             
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden md:overflow-visible card-hover relative">
-              {/* Alert decorations */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-neon/30 via-cyber-neon/70 to-cyber-neon/30"></div>
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-neon/30 via-cyber-neon/70 to-cyber-neon/30"></div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden card-hover relative">
+              {/* Success indicator */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500/30 via-cyber-neon/70 to-green-500/30"></div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500/30 via-cyber-neon/70 to-green-500/30"></div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 <div className="p-6 relative">
                   <div className="bg-cyber-dark/50 border border-white/5 rounded-lg p-5 h-full flex flex-col justify-center relative overflow-hidden">
-                    {/* Pulsing alert indicator */}
-                    <div className="absolute top-3 right-8 flex items-center">
-                      <span className="flex h-3 w-3 mr-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyber-neon opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-cyber-neon"></span>
-                      </span>
-                      <span className="text-xs text-cyber-neon">LIVE ISSUE</span>
-                    </div>
-                    
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-full bg-cyber-neon/10 flex items-center justify-center border border-cyber-neon/30">
-                        <AlertTriangle size={24} className="text-cyber-neon" />
+                        <BrainCircuit size={24} className="text-cyber-neon" />
                       </div>
-                      <h3 className="text-xl font-semibold text-white">Digital Misinformation Alert</h3>
+                      <h3 className="text-xl font-semibold text-white">Education Initiative</h3>
                     </div>
                     
                     <p className="mb-4 text-white/80 leading-relaxed">
-                      As cybersecurity advocates, we are deeply concerned about the spread of false narratives and propaganda 
-                      in the ongoing tensions between Pakistan and India. Digital warfare is as significant as physical confrontation, and manipulation 
-                      of information threatens global peace and security.
+                      Tech Tayari 1.0 is a collaborative initiative between NanoTechx and Cisco Networking Academy, 
+                      designed to provide cutting-edge technical education through Cisco's NetAcad Portal. 
+                      ACM SIGSAC's participation represents our commitment to advancing cybersecurity education.
                     </p>
                     
                     <div className="mb-4 flex items-center">
                       <div className="w-8 h-8 mr-3 rounded-full bg-cyber-neon/10 flex items-center justify-center">
                         <Globe size={18} className="text-cyber-neon" />
                       </div>
-                      <span className="text-cyber-neon font-medium">Our Digital Response Initiative:</span>
+                      <span className="text-cyber-neon font-medium">Official Outreach Partner</span>
                     </div>
                     
                     <div className="bg-white/5 border border-cyber-neon/20 rounded-md p-3 mb-4 relative">
-                      <div className="text-sm font-mono text-cyber-neon opacity-80 pb-1 overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-cyber-neon/20 scrollbar-track-transparent pr-10">
-                        #DUETSocialMediaWarriorsAgainstIndianAggression
+                      <div className="text-sm text-white/90">
+                        ACM SIGSAC DUET is an official collaborator on the Tech Tayari 1.0, <span className="text-cyber-neon font-medium hover:underline"><a href="https://nanotechx.org/tech-tayari" target='_blank'>Visit their website, to get yourself enrolled!</a></span>
                       </div>
-                      <button 
-                        onClick={copyHashtagToClipboard}
-                        className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 bg-cyber-neon/10 rounded hover:bg-cyber-neon/20 transition-colors"
-                        aria-label="Copy hashtag to clipboard"
-                        title="Copy to clipboard"
-                      >
-                        <Copy size={16} className="text-cyber-neon" />
-                      </button>
                     </div>
                     
                     <p className="text-sm text-white/70">
-                      Join us in promoting fact-based discourse and countering digital propaganda that aims to distort reality. 
-                      Truth is our strongest defensive measure in the age of information warfare.
+                      This collaboration reinforces our dedication to bridging the skills gap in technology 
+                      and providing our members with industry-relevant training opportunities.
                     </p>
                   </div>
                 </div>
                 
                 <div className="p-6 flex flex-col justify-center">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Our Advocacy Position</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-white">Training Domains</h3>
                   
                   <div className="space-y-4">
-                    <div className="flex items-start">
-                      <div className="mt-1 mr-3 text-cyber-neon">01</div>
-                      <p className="text-white/80">
-                        <span className="text-cyber-neon font-medium">Fact Verification:</span> We are committed to combating false narratives by 
-                        verifying information before sharing and encouraging critical media literacy among our community.
-                      </p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
+                        <CircuitBoard size={16} className="text-blue-400" />
+                      </div>
+                      <span className="text-white/80">Programming</span>
                     </div>
                     
-                    <div className="flex items-start">
-                      <div className="mt-1 mr-3 text-cyber-neon">02</div>
-                      <p className="text-white/80">
-                        <span className="text-cyber-neon font-medium">Digital Awareness:</span> We recognize how international media can be manipulated 
-                        to shape global perception, and we stand against all forms of digital misinformation.
-                      </p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center">
+                        <Shield size={16} className="text-red-400" />
+                      </div>
+                      <span className="text-white/80">Cybersecurity</span>
                     </div>
                     
-                    <div className="flex items-start">
-                      <div className="mt-1 mr-3 text-cyber-neon">03</div>
-                      <p className="text-white/80">
-                        <span className="text-cyber-neon font-medium">Responsible Engagement:</span> As technology students, we have a responsibility 
-                        to ensure digital platforms serve as channels for truth rather than vehicles for propaganda.
-                      </p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                        <Network size={16} className="text-green-400" />
+                      </div>
+                      <span className="text-white/80">Networking</span>
                     </div>
                     
-                    <div className="mt-4">
-                      <Button variant="outline" className="border-cyber-neon/30 text-cyber-neon hover:bg-cyber-neon/10">
-                        <a target='_blank' href='https://www.linkedin.com/posts/acm-sigsac_digitaldefense-pakistancyberalert-cyberattack2025-activity-7327195675417329664-vAAZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEwB_U8Bp2kty5hvWdYZr6iF7eT8AS2eOgE'>
-                          Join Our Initiative
-                        </a>
-                      </Button>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center">
+                        <BrainCircuit size={16} className="text-purple-400" />
+                      </div>
+                      <span className="text-white/80">Artificial Intelligence</span>
+                    </div>
+                    
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center">
+                        <Database size={16} className="text-orange-400" />
+                      </div>
+                      <span className="text-white/80">Data Science</span>
+                    </div>
+                    
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center">
+                        <Cpu size={16} className="text-cyan-400" />
+                      </div>
+                      <span className="text-white/80">DevNet Associate</span>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6">
+                    <div className="text-xs text-cyber-neon/70 mb-2">Powered by</div>
+                    <div className="flex items-center gap-2 text-white/80">
+                      <span className="font-medium">NanoTechx</span>
+                      <span className="text-cyber-neon">×</span>
+                      <span className="font-medium">Cisco Networking Academy</span>
                     </div>
                   </div>
                 </div>
@@ -605,9 +607,9 @@ const AboutUs = () => {
               
               {/* Binary code decoration */}
               <div className="absolute bottom-2 right-2 text-[10px] font-mono text-cyber-neon/10 select-none pointer-events-none">
-                01010100 01110010 01110101 01110100 01101000<br />
-                01000001 01100010 01101111 01110110 01100101<br />
-                01010000 01110010 01101111 01110000 01100001
+                01010100 01100101 01100011 01101000<br />
+                01010100 01100001 01111001 01100001<br />
+                01010010 01001001 00100000 00110001
               </div>
             </div>
           </div>

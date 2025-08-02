@@ -109,7 +109,19 @@ export default {
 				'scale-up': {
 					'0%': { transform: 'scale(0.95)', opacity: '0' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
-				}
+				},
+				'reveal-blur': {
+					'0%': {
+						opacity: '0',
+						filter: 'blur(10px)',
+						transform: 'scale(1.05)'
+					},
+					'100%': {
+						opacity: '1',
+						filter: 'blur(0px)',
+						transform: 'scale(1)'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -119,7 +131,8 @@ export default {
 				'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 				'flow-left': 'flow-left 15s linear infinite',
 				'float': 'float 3s ease-in-out infinite',
-				'scale-up': 'scale-up 0.3s ease-out'
+				'scale-up': 'scale-up 0.3s ease-out',
+				'reveal-blur': 'reveal-blur 1.2s ease-out forwards',
 			},
 			fontSize: {
 				'heading-xl': ['4rem', { lineHeight: '1.1', fontWeight: '700' }],

@@ -3,23 +3,16 @@ import React, { useEffect } from 'react';
 const sponsors = [
   { id: 1, name: "Meherma Tech", logo: "/msp.jpg" },
   { id: 2, name: "IEEE Education Society", logo: "/1.svg" },
+  { id: 3, name: "NanoTechX", logo: "/nanotechx-black.jpg" },
+  { id: 4, name: "ACM Cyber", logo: "acm-cys.jpeg" },
+  { id: 5, name: "ACM BAHRIA", logo: "/2.svg" },
+  { id: 6, name: "AIS", logo: "/ais.png" },
+  { id: 7, name: "AICP", logo: "/aicp.jpeg" },
 ];
 
-const outreachPartners = [
-  { id: 3, name: "ACM Cyber", logo: "acm-cys.jpeg" },
-  { id: 4, name: "ACM BAHRIA", logo: "/2.svg" },
-];
-
-const collaborators = [
-  { id: 5, name: "AIS", logo: "/ais.png" },
-  { id: 6, name: "AICP", logo: "/aicp.jpeg" },
-  { id: 7, name: "ACM-CSS-DUET", logo: "/acm-css.jpeg" },
-];
-
-const SectionBlock = ({ title, items }) => {
+const SectionBlock = ({ items }) => {
   return (
     <div className="mb-12 scroll-fx">
-      <h3 className="text-white text-xl font-semibold mb-6 text-center">{title}</h3>
       <div className="flex flex-wrap justify-center gap-8">
         {items.map((item, index) => (
           <div
@@ -78,10 +71,8 @@ const CollaboratorsSection = () => {
           </p>
         </div>
 
-        <SectionBlock title="Our Sponsors" items={sponsors} />
-        <SectionBlock title="Outreach Partners" items={outreachPartners} />
-        <SectionBlock title="Collaborators" items={collaborators} />
-
+        <SectionBlock items={sponsors} />
+  
         <div className="mt-16 text-center scroll-fx">
           <div className="inline-block border border-white/10 bg-white/5 rounded-lg p-6 max-w-3xl">
             <h3 className="text-xl mb-4 text-cyber-neon">Become a Partner</h3>

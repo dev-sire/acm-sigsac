@@ -11,6 +11,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 import { setupScrollReveal } from '@/utils/scrollReveal';
 import createCursorTrail from '@/utils/cursorTrail';
 import VisionSection from '@/components/VisionSection';
+import SecondaryHeroSection from '@/components/SecondaryHeroSection';
 
 const Index = () => {
   useEffect(() => {
@@ -29,7 +30,7 @@ const Index = () => {
   return (
     <div className="bg-cyber-dark text-white min-h-screen">
       <Navbar />
-      <HeroSection />
+      <SecondaryHeroSection />
       <EventsSection />
       <CollaboratorsSection />
       <GallerySection />
