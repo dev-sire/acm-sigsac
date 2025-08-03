@@ -51,12 +51,12 @@ const EventsSection = () => {
     <section id="events" className="py-24 relative">
       <div className="absolute inset-0 grid-pattern opacity-10 -z-10"></div>
       
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 section-content">
         <div className="text-center mb-16">
-          <h2 className="text-heading-md mb-4 circuit-line inline-block">
+          <h2 className="text-heading-md mb-4 circuit-line inline-block section-header">
             Upcoming <span className="text-cyber-neon">Events</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-white/70">
+          <p className="max-w-2xl mx-auto text-white/70 section-header">
             Join us for our upcoming events where you'll learn new skills, 
             network with professionals, and participate in hands-on activities.
           </p>
@@ -66,8 +66,7 @@ const EventsSection = () => {
           {events.map((event, index) => (
             <div 
               key={event.id} 
-              className="scroll-fx" 
-              style={{ transitionDelay: `${index * 0.1}s` }}
+              className="event-card"
             >
               <Card className="bg-cyber-dark/60 border border-white/10 overflow-hidden card-hover h-full relative group">
                 {/* Binary animation overlay */}

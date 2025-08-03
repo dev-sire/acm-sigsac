@@ -17,8 +17,7 @@ const SectionBlock = ({ items }) => {
         {items.map((item, index) => (
           <div
             key={item.id}
-            className="relative group scroll-fx transition-transform duration-300"
-            style={{ transitionDelay: `${index * 0.1}s` }}
+            className="relative group scroll-fx transition-transform duration-300 collaborator-logo"
           >
             {/* Animated Border */}
             <div className="relative w-36 h-36 flex items-center justify-center rounded-lg">
@@ -60,8 +59,8 @@ const CollaboratorsSection = () => {
   return (
     <section id="collaborators" className="py-24 relative bg-cyber-dark/50 mx-auto">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyber-neon/5 to-transparent -z-10" />
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 scroll-fx">
+      <div className="container mx-auto px-4 section-content">
+        <div className="text-center mb-16 section-header">
           <h2 className="text-heading-md mb-4">
             Our <span className="text-cyber-neon">Strategic</span> Alliances
           </h2>

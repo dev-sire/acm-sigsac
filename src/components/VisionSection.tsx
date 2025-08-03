@@ -85,14 +85,14 @@ const VisionSection = () => {
         <div className="absolute right-12 top-3/4 w-6 h-[1px] bg-cyber-neon"></div>
       </div>
       
-      <div className="container mx-auto px-4">
-        <div className={`text-center mb-16 scroll-fx ${isVisible ? 'visible' : ''}`}>
+      <div className="container mx-auto px-4 section-content">
+        <div className="text-center mb-16 section-header">
           <h2 className="text-heading-md mb-4 relative inline-block">
             Our <span className="text-cyber-neon">Vision</span>
             <div className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyber-neon to-transparent"></div>
           </h2>
           <p className="max-w-2xl mx-auto text-white/70">
-            ACM SIGSAC DUET aims to create a vibrant community of cybersecurity enthusiasts, practitioners, and leaders who are equipped with cutting-edge knowledge and skills to excel in the rapidly evolving field of information security.
+            ACM SIGSAG aims to create a vibrant community of cybersecurity enthusiasts, practitioners, and leaders who are equipped with cutting-edge knowledge and skills to excel in the rapidly evolving field of information security.
           </p>
         </div>
         
@@ -120,12 +120,11 @@ const VisionSection = () => {
         </div>
         
         {/* Core values section */}
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 scroll-fx ${isVisible ? 'visible' : ''}`}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           {coreValues.map((value, index) => (
             <div 
               key={index} 
-              className="bg-white/5 border border-white/10 p-6 rounded-lg text-center hover:border-cyber-neon/30 transition-all cursor-default"
-              style={{animationDelay: `${index * 0.2}s`}}
+              className="bg-white/5 border border-white/10 p-6 rounded-lg text-center hover:border-cyber-neon/30 transition-all cursor-default vision-card"
             >
               <div className="mx-auto w-12 h-12 rounded-full bg-cyber-neon/10 flex items-center justify-center mb-4">
                 {value.icon}
@@ -136,12 +135,11 @@ const VisionSection = () => {
           ))}
         </div>
         
-        <div className={`grid md:grid-cols-2 gap-8 mt-16 scroll-fx ${isVisible ? 'visible' : ''}`}>
+        <div className="grid md:grid-cols-2 gap-8 mt-16">
           {visionCards.map((card, index) => (
             <Card 
               key={index} 
-              className="bg-white/5 border border-white/10 overflow-hidden card-hover" 
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="bg-white/5 border border-white/10 overflow-hidden card-hover vision-card" 
             >
               <CardContent className="p-6">
                 <div className="flex items-center mb-6">

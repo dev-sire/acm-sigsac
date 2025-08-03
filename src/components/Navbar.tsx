@@ -99,9 +99,14 @@ const Navbar = () => {
               >
                 Team
               </a>
-              <Button className="bg-cyber-neon text-cyber-dark hover:bg-cyber-neon/80 w-full">
-                Join Us
-              </Button>
+              <a 
+                href="https://forms.gle/fn8uNgoTQkMEFjDCA" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-6 py-2 bg-cyber-neon text-cyber-dark font-medium rounded-md hover:bg-cyber-neon/80 transition-colors"
+              >
+                Apply Now
+              </a>
             </div>
           </div>
         )}

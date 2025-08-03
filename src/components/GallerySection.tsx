@@ -87,11 +87,11 @@ const GallerySection = () => {
       <div className="absolute inset-0 grid-pattern opacity-10 -z-10"></div>
       
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 scroll-fx">
-          <h2 className="text-heading-md mb-4">
+        <div className="text-center mb-16 section-content">
+          <h2 className="text-heading-md mb-4 section-header">
             Event <span className="text-cyber-neon">Gallery</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-white/70">
+          <p className="max-w-2xl mx-auto text-white/70 section-header">
             Explore our past events and see what makes ACM SIGSAG a thriving community 
             of cybersecurity enthusiasts.
           </p>

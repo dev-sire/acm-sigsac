@@ -171,11 +171,11 @@ const TeamSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyber-neon/5 to-transparent -z-10"></div>
       
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 scroll-fx">
-          <h2 className="text-heading-md mb-4">
+        <div className="text-center mb-16 section-content">
+          <h2 className="text-heading-md mb-4 section-header">
             Meet Our <span className="text-cyber-neon">Team</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-white/70">
+          <p className="max-w-2xl mx-auto text-white/70 section-header">
             Our dedicated executive committee works tirelessly to organize events, 
             workshops, and create opportunities for our members.
           </p>
@@ -188,7 +188,7 @@ const TeamSection = () => {
             return (
               <div 
                 key={member.id} 
-                className={`transition-all duration-700 ${isDecrypted ? 'opacity-100' : 'opacity-80'}`}
+                className={`transition-all duration-700 team-card ${isDecrypted ? 'opacity-100' : 'opacity-80'}`}
               >
                 <Card className={`bg-white/5 border border-white/10 overflow-hidden card-hover h-full ${isDecrypted ? 'border-cyber-neon/30' : ''}`}>
                   <div className="p-6">
@@ -235,9 +235,14 @@ const TeamSection = () => {
               Interested in becoming part of the executive committee? 
               We're always looking for passionate individuals to join our team.
             </p>
-            <button className="px-6 py-2 bg-cyber-neon text-cyber-dark font-medium rounded-md hover:bg-cyber-neon/80 transition-colors">
+            <a 
+              href="https://forms.gle/fn8uNgoTQkMEFjDCA" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-6 py-2 bg-cyber-neon text-cyber-dark font-medium rounded-md hover:bg-cyber-neon/80 transition-colors"
+            >
               Apply Now
-            </button>
+            </a>
           </div>
         </div>
       </div>
