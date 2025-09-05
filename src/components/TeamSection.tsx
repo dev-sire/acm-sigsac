@@ -172,14 +172,14 @@ const TeamSection = () => {
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 section-content">
-          <h2 className="text-heading-md mb-4 section-header">
+          <h2 className="font-tech text-heading-md mb-4 section-header">
             Meet Our <span className="text-cyber-neon">Team</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-white/70 section-header">
+          <p className="font-rajdhani max-w-2xl mx-auto text-white/70 section-header">
             Our dedicated executive committee works tirelessly to organize events, 
             workshops, and create opportunities for our members.
           </p>
-        </div>
+        </div>  
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => {
@@ -190,7 +190,7 @@ const TeamSection = () => {
                 key={member.id} 
                 className={`transition-all duration-700 team-card ${isDecrypted ? 'opacity-100' : 'opacity-80'}`}
               >
-                <Card className={`bg-white/5 border border-white/10 overflow-hidden card-hover h-full ${isDecrypted ? 'border-cyber-neon/30' : ''}`}>
+                <Card className={`font-rajdhani bg-white/5 border border-white/10 overflow-hidden card-hover h-full ${isDecrypted ? 'border-cyber-neon/30' : ''}`}>
                   <div className="p-6">
                     <div className={`relative w-32 h-32 mx-auto mb-6 transition-all duration-700 ${isDecrypted ? 'scale-100' : 'scale-95 filter blur-sm'}`}>
                       <div className={`absolute inset-0 rounded-full ${isDecrypted ? 'bg-cyber-neon/20 animate-pulse-glow' : 'bg-white/10'}`}></div>
@@ -230,8 +230,8 @@ const TeamSection = () => {
         
         <div className="mt-16 text-center scroll-fx">
           <div className="inline-block border border-cyber-neon/30 bg-white/5 rounded-lg p-6 max-w-3xl">
-            <h3 className="text-xl mb-4 text-white">Join Our Team</h3>
-            <p className="text-white/70 mb-6">
+            <h3 className="font-tech text-xl mb-4 text-white">Join Our Team</h3>
+            <p className="font-rajdhani text-white/70 mb-6">
               Interested in becoming part of the executive committee? 
               We're always looking for passionate individuals to join our team.
             </p>
@@ -239,7 +239,7 @@ const TeamSection = () => {
               href="https://forms.gle/fn8uNgoTQkMEFjDCA" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-6 py-2 bg-cyber-neon text-cyber-dark font-medium rounded-md hover:bg-cyber-neon/80 transition-colors"
+              className="font-rajdhani px-6 py-2 bg-cyber-neon text-cyber-dark font-medium rounded-md hover:bg-cyber-neon/80 transition-colors"
             >
               Apply Now
             </a>

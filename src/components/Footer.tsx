@@ -4,7 +4,7 @@ import { Github, Twitter, Linkedin, Facebook, Instagram, Mail } from 'lucide-rea
 
 const Footer = () => {
   return (
-    <div className="bg-cyber-dark relative">
+    <div className="font-rajdhani bg-cyber-dark relative">
       <div className="absolute inset-0 grid-pattern opacity-5"></div>
       
       <div className="container mx-auto px-4 py-16">

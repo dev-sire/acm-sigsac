@@ -445,7 +445,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl mx-auto text-center">
           <div className="mb-6 inline-block animate-fade-in">
-            <div className="px-4 py-1 border border-cyber-neon text-cyber-neon text-sm font-mono rounded-full animate-pulse-glow">
+            <div className="px-4 py-1 border border-cyber-neon text-cyber-neon text-sm font-orbitron rounded-full animate-pulse-glow">
               DAWOOD UNIVERSITY
             </div>
           </div>

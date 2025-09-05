@@ -71,7 +71,7 @@ const TimeUnit: React.FC<{ value: number; label: string }> = ({ value, label }) 
   <div className="flex flex-col items-center">
     <div className="bg-cyber-dark/80 border border-cyber-neon/30 rounded-md px-2 py-1 min-w-[45px] text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-cyber-neon/5 animate-pulse-glow pointer-events-none"></div>
-      <span className="text-lg font-mono text-cyber-neon relative z-10">{value.toString().padStart(2, '0')}</span>
+      <span className="text-lg font-orbitron text-cyber-neon relative z-10">{value.toString().padStart(2, '0')}</span>
     </div>
     <span className="text-xs text-white/60 mt-1">{label}</span>
   </div>

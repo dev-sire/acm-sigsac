@@ -61,10 +61,10 @@ const CollaboratorsSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyber-neon/5 to-transparent -z-10" />
       <div className="container mx-auto px-4 section-content">
         <div className="text-center mb-16 section-header">
-          <h2 className="text-heading-md mb-4">
+          <h2 className="font-tech text-heading-md mb-4">
             Our <span className="text-cyber-neon">Strategic</span> Alliances
           </h2>
-          <p className="max-w-2xl mx-auto text-white/70">
+          <p className="font-rajdhani max-w-2xl mx-auto text-white/70">
             We're proud to work with these leading organizations to advance cybersecurity 
             education and provide exceptional opportunities for our members.
           </p>
@@ -73,7 +73,7 @@ const CollaboratorsSection = () => {
         <SectionBlock items={sponsors} />
   
         <div className="mt-16 text-center scroll-fx">
-          <div className="inline-block border border-white/10 bg-white/5 rounded-lg p-6 max-w-3xl">
+          <div className="font-rajdhani inline-block border border-white/10 bg-white/5 rounded-lg p-6 max-w-3xl">
             <h3 className="text-xl mb-4 text-cyber-neon">Become a Partner</h3>
             <p className="text-white/70 mb-6">
               Interested in collaborating with ACM SIGSAC DUET? We're always looking 

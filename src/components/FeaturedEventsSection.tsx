@@ -100,7 +100,7 @@ const FeaturedEventsSection = () => {
   ];
 
   return (
-    <section className="py-16 border-b border-white/10">
+    <section className="font-orbitron py-16 border-b border-white/10">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">

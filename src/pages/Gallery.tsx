@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from 'react';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { gallery } from '@/components/GallerySection';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -9,6 +8,7 @@ import createCursorTrail from '@/utils/cursorTrail';
 import { motion } from 'framer-motion';
 import FeaturedEventsSection from '@/components/FeaturedEventsSection';
 import { Separator } from '@/components/ui/separator';
+import CyberpunkNavbar from '@/components/CyberpunkNavbar';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<null | number>(null);
@@ -41,7 +41,7 @@ const Gallery = () => {
 
   return (
     <div className="bg-cyber-dark text-white min-h-screen">
-      <Navbar />
+      <CyberpunkNavbar />
       
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">

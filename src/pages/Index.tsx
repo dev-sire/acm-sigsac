@@ -11,6 +11,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 import createCursorTrail from '@/utils/cursorTrail';
 import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import SecondaryHeroSection from '@/components/SecondaryHeroSection';
+import CyberpunkNavbar from '@/components/CyberpunkNavbar';
 
 const Index = () => {
   // Initialize GSAP animations
@@ -30,7 +31,7 @@ const Index = () => {
 
   return (
     <div className="bg-cyber-dark text-white min-h-screen relative">
-      <Navbar />
+      <CyberpunkNavbar />
       <div className="scroll-section">
         <SecondaryHeroSection />
       </div>

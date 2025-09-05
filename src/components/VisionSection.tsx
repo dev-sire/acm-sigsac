@@ -87,11 +87,11 @@ const VisionSection = () => {
       
       <div className="container mx-auto px-4 section-content">
         <div className="text-center mb-16 section-header">
-          <h2 className="text-heading-md mb-4 relative inline-block">
+          <h2 className="font-tech text-heading-md mb-4 relative inline-block">
             Our <span className="text-cyber-neon">Vision</span>
             <div className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyber-neon to-transparent"></div>
           </h2>
-          <p className="max-w-2xl mx-auto text-white/70">
+          <p className="font-rajdhani max-w-2xl mx-auto text-white/70">
             ACM SIGSAG aims to create a vibrant community of cybersecurity enthusiasts, practitioners, and leaders who are equipped with cutting-edge knowledge and skills to excel in the rapidly evolving field of information security.
           </p>
         </div>
@@ -108,7 +108,7 @@ const VisionSection = () => {
             </div>
           </div>
           
-          <p className="italic text-white/80 text-center relative z-10">
+          <p className="font-rajdhani italic text-white/80 text-center relative z-10">
             "We envision a future where our members are at the forefront of cybersecurity innovation, ethical practices, and research, contributing to a safer digital world through education, collaboration, and community service."
           </p>
           
@@ -120,7 +120,7 @@ const VisionSection = () => {
         </div>
         
         {/* Core values section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+        <div className="font-rajdhani grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           {coreValues.map((value, index) => (
             <div 
               key={index} 
@@ -139,7 +139,7 @@ const VisionSection = () => {
           {visionCards.map((card, index) => (
             <Card 
               key={index} 
-              className="bg-white/5 border border-white/10 overflow-hidden card-hover vision-card" 
+              className="font-rajdhani bg-white/5 border border-white/10 overflow-hidden card-hover vision-card" 
             >
               <CardContent className="p-6">
                 <div className="flex items-center mb-6">
@@ -164,10 +164,10 @@ const VisionSection = () => {
                 
                 <blockquote className="border-l-2 border-cyber-neon pl-4 py-2 italic text-white/80 relative">
                   {/* Binary decorations */}
-                  <div className="absolute -right-2 top-0 text-[10px] text-cyber-neon/20 font-mono">
+                  <div className="absolute -right-2 top-0 text-[10px] text-cyber-neon/20 font-orbitron">
                     01010101
                   </div>
-                  <div className="absolute -left-8 bottom-0 text-[10px] text-cyber-neon/20 font-mono">
+                  <div className="absolute -left-8 bottom-0 text-[10px] text-cyber-neon/20 font-orbitron">
                     10101010
                   </div>
                   {card.vision}

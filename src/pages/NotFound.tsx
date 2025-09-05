@@ -94,7 +94,7 @@ const NotFound = () => {
         </h1>
         
         <div className={`text-2xl text-white/70 mb-8 ${showGlitch ? 'glitch' : ''}`} data-text="ACCESS DENIED">
-          <span className="font-mono">ACCESS_DENIED</span>
+          <span className="font-orbitron">ACCESS_DENIED</span>
         </div>
         
         <p className="text-xl text-white/70 mb-6 max-w-md">
@@ -112,7 +112,7 @@ const NotFound = () => {
           </Link>
         </div>
         
-        <div className="mt-12 font-mono text-sm text-white/40 p-2 border border-white/20 bg-cyber-dark/50 max-w-md mx-auto">
+        <div className="mt-12 font-orbitron text-sm text-white/40 p-2 border border-white/20 bg-cyber-dark/50 max-w-md mx-auto">
           <div className="mb-2">Error Code: 0x8007045A</div>
           <div className="mb-2">Timestamp: {new Date().toISOString()}</div>
           <div>Path: {location.pathname}</div>

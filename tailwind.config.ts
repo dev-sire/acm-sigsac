@@ -25,13 +25,27 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				// Coastal Blue Cyberpunk Palette
+				coastal: {
+					900: '#012A4A',  // Darkest blue - main backgrounds
+					800: '#013A63',  // Dark blue - containers
+					700: '#01497C',  // Medium dark - cards
+					600: '#014F86',  // Medium - accents
+					500: '#2A6F97',  // Medium light - interactive elements
+					400: '#2C7DA0',  // Light - hover states
+					300: '#468FAF',  // Lighter - text on dark
+					200: '#61A5C2',  // Very light - borders
+					100: '#89C2D9',  // Ultra light - subtle effects
+					50: '#A9D6E5',   // Lightest - highlights
+				},
+				// Legacy support - map to coastal blue
 				cyber: {
-					primary: '#1EAEDB',    // Bright blue
-					secondary: '#7E69AB',  // Secondary purple
-					accent: '#9b87f5',     // Primary purple
-					dark: '#1A1F2C',       // Dark purple background
-					light: '#D6BCFA',      // Light purple
-					neon: '#33C3F0',       // Neon blue for highlights
+					primary: '#012A4A',    // coastal-400
+					secondary: '#468FAF',  // coastal-300
+					accent: '#89C2D9',     // coastal-100
+					dark: '#012A4A',       // coastal-900
+					light: '#A9D6E5',      // coastal-50
+					neon: '#61A5C2',       // coastal-200 (main neon)
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -109,19 +123,7 @@ export default {
 				'scale-up': {
 					'0%': { transform: 'scale(0.95)', opacity: '0' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
-				},
-				'reveal-blur': {
-					'0%': {
-						opacity: '0',
-						filter: 'blur(10px)',
-						transform: 'scale(1.05)'
-					},
-					'100%': {
-						opacity: '1',
-						filter: 'blur(0px)',
-						transform: 'scale(1)'
-					}
-				},
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -131,13 +133,18 @@ export default {
 				'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 				'flow-left': 'flow-left 15s linear infinite',
 				'float': 'float 3s ease-in-out infinite',
-				'scale-up': 'scale-up 0.3s ease-out',
-				'reveal-blur': 'reveal-blur 1.2s ease-out forwards',
+				'scale-up': 'scale-up 0.3s ease-out'
 			},
 			fontSize: {
-				'heading-xl': ['4rem', { lineHeight: '1.1', fontWeight: '700' }],
+				'heading-xl': ['4rem', { lineHeight: '1.1', fontWeight: '800' }],
 				'heading-lg': ['3rem', { lineHeight: '1.2', fontWeight: '700' }],
-				'heading-md': ['2rem', { lineHeight: '1.3', fontWeight: '700' }],
+				'heading-md': ['2rem', { lineHeight: '1.3', fontWeight: '600' }],
+				'heading-sm': ['1.5rem', { lineHeight: '1.4', fontWeight: '500' }],
+			},
+			fontFamily: {
+				'orbitron': ['Orbitron', 'monospace'],
+				'rajdhani': ['Rajdhani', 'sans-serif'],
+				'tech': ['Share Tech Mono', 'monospace'],
 			},
 			backgroundImage: {
 				'circuit-pattern': "url('/circuit-pattern.svg')",
