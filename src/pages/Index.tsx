@@ -1,22 +1,21 @@
 
 import React, { useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import EventsSection from '@/components/EventsSection';
 import CollaboratorsSection from '@/components/CollaboratorsSection';
 import GallerySection from '@/components/GallerySection';
 import VisionSection from '@/components/VisionSection';
 import TeamSection from '@/components/TeamSection';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
-import createCursorTrail from '@/utils/cursorTrail';
 import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import SecondaryHeroSection from '@/components/SecondaryHeroSection';
 import CyberpunkNavbar from '@/components/CyberpunkNavbar';
+import createCursorTrail from '@/utils/cursorTrail';
+import CyberpunkEventsSection from '@/components/CyberpunkEventsSection';
 
 const Index = () => {
   // Initialize GSAP animations
   const { refreshScrollTrigger } = useGSAPAnimations();
-  
+
   useEffect(() => {
     // Setup cursor trail effect
     const cleanupCursorTrail = createCursorTrail();
@@ -31,12 +30,16 @@ const Index = () => {
 
   return (
     <div className="bg-cyber-dark text-white min-h-screen relative">
+      {/* <div 
+        className="fixed inset-0 pointer-events-none z-10 opacity-60"
+        style={cursorGlow}
+      /> */}
       <CyberpunkNavbar />
       <div className="scroll-section">
         <SecondaryHeroSection />
       </div>
       <div className="scroll-section events-section">
-        <EventsSection />
+        <CyberpunkEventsSection />
       </div>
       <div className="scroll-section collaborators-section">
         <CollaboratorsSection />

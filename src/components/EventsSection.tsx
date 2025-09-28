@@ -48,15 +48,15 @@ const events = [
 
 const EventsSection = () => {
   return (
-    <section id="events" className="font-rajdhani py-24 relative">
+    <section id="events" className="py-24 relative">
       <div className="absolute inset-0 grid-pattern opacity-10 -z-10"></div>
       
       <div className="container mx-auto px-4 section-content">
-        <div className="text-center mb-16">
-          <h2 className="font-tech text-heading-md mb-4 circuit-line inline-block section-header">
+        <div className="text-center mb-16 section-header">
+          <h2 className="text-heading-md mb-4 circuit-line inline-block">
             Upcoming <span className="text-cyber-neon">Events</span>
           </h2>
-          <p className="font-rajdhani max-w-2xl mx-auto text-white/70 section-header">
+          <p className="max-w-2xl mx-auto text-white/70">
             Join us for our upcoming events where you'll learn new skills, 
             network with professionals, and participate in hands-on activities.
           </p>
@@ -68,7 +68,7 @@ const EventsSection = () => {
               key={event.id} 
               className="event-card"
             >
-              <Card className="font-rajdhani bg-cyber-dark/60 border border-white/10 overflow-hidden card-hover h-full relative group">
+              <Card className="bg-cyber-dark/60 border border-white/10 overflow-hidden card-hover h-full relative group">
                 {/* Binary animation overlay */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-1000 pointer-events-none overflow-hidden">
                   {Array.from({ length: 10 }).map((_, i) => (

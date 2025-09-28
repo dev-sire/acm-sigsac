@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useParams } from 'react-router-dom';
 import RegistrationForm from '@/components/RegistrationForm';
@@ -10,6 +9,7 @@ import { motion } from "framer-motion";
 import SideAnimations from '@/components/SideAnimations';
 import HackemonRegistrationForm from '@/components/HackemonRegistration';
 import DemogoronRegistrationForm from '@/components/DemogoronRegistration';
+import CyberpunkNavbar from '@/components/CyberpunkNavbar';
 
 const Registration = () => {
   const { eventType } = useParams();
@@ -71,7 +71,7 @@ const Registration = () => {
 
   return (
     <div className="bg-cyber-dark text-white min-h-screen">
-      <Navbar />
+      <CyberpunkNavbar />
       <div className="hidden lg:block">
         <SideAnimations />
       </div>

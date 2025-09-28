@@ -14,7 +14,7 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
     >
       {/* Animated Grid Pattern / Globe */}
-      <div className="absolute inset-0 opacity-50 flex items-center justify-center">
+      <div className="absolute inset-2 opacity-50 flex items-center justify-center">
         <SubmarineCablesGlobe />
       </div>
 
